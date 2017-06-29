@@ -7,6 +7,7 @@
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="responsive.css" />
 	</head>
 	<body>
         <div class="face nav-section" id="face">
@@ -36,6 +37,7 @@
                 <canvas id="intro-bg" width="100"></canvas>
             </div>
             <div class="content">
+                <div class="mobile-logo">Primas</div>
                 <div class="slogan">识别有价值内容</div>
                 <div class="description">
                     <div class="line">用区块链打破流量经济的桎梏</div>
@@ -129,9 +131,11 @@
         </div>
         <div id="investors" class="investors  nav-section">
             <div class="container">
-                <div class="title">
+                <div class="main-section-title">
+                    <span class="sep-line"></span>
                     <span class="zh">投资人</span>
                     <span class="en">Investors</span>
+                    <span class="sep-line"></span>
                 </div>
                 <div class="content">
                     <div class="investor">
@@ -143,17 +147,17 @@
                     </div>
                     <div class="investor">
                         <div class="photo">
-                            <img src="images/investors/gongming.png" />
-                        </div>
-                        <div class="name">龚鸣</div>
-                        <div class="intro">区块链铅笔/ICOAGE创始人</div>
-                    </div>
-                    <div class="investor">
-                        <div class="photo">
                             <img src="images/investors/taoquming.png" />
                         </div>
                         <div class="name">陶曲明</div>
                         <div class="intro">万向区块链合伙人</div>
+                    </div>
+                    <div class="investor">
+                        <div class="photo">
+                            <img src="images/investors/gongming.png" />
+                        </div>
+                        <div class="name">龚鸣</div>
+                        <div class="intro">区块链铅笔/ICOAGE创始人</div>
                     </div>
                     <div class="investor">
                         <div class="photo">
@@ -167,58 +171,65 @@
         </div>
         <div id="roadmap" class="roadmap  nav-section">
             <div class="container">
-                <div class="title">
+                <div class="main-section-title">
+                    <span class="sep-line"></span>
                     <span class="zh">开发路线图</span>
                     <span class="en">Roadmap</span>
+                    <span class="sep-line"></span>
                 </div>
                 <div class="line">
                     <div class="gradient left"></div>
                     <div class="gradient right"></div>
                 </div>
                 <div class="content">
-                    <div class="milestone">
+                    <div class="milestone right">
                         <div class="text">
                             <div class="date">2017.8.1</div>
                             <div class="name">Demo网站上线</div>
                         </div>
                         <div class="icon">
-                            <img src="images/point.png" />
+                            <img src="images/point.png" class="img" />
+                            <img src="images/point-right.png" class="mobile-img" />
                         </div>
                     </div>
-                    <div class="milestone">
+                    <div class="milestone left">
                         <div class="text">
                             <div class="date">2017.8.1</div>
                             <div class="name">Demo网站上线</div>
                         </div>
                         <div class="icon">
-                            <img src="images/point.png" />
+                            <img src="images/point.png" class="img" />
+                            <img src="images/point-left.png" class="mobile-img" />
                         </div>
                     </div>
-                    <div class="milestone">
+                    <div class="milestone right">
                         <div class="text">
                             <div class="date">2017.8.1</div>
                             <div class="name">Demo网站上线</div>
                         </div>
                         <div class="icon">
-                            <img src="images/point.png" />
+                            <img src="images/point.png" class="img" />
+                            <img src="images/point-right.png" class="mobile-img" />
                         </div>
                     </div>
-                    <div class="milestone">
+                    <div class="milestone left">
                         <div class="text">
                             <div class="date">2017.8.1</div>
                             <div class="name">Demo网站上线</div>
                         </div>
                         <div class="icon">
-                            <img src="images/point.png" />
+                            <img src="images/point.png" class="img" />
+                            <img src="images/point-left.png" class="mobile-img" />
                         </div>
                     </div>
-                    <div class="milestone">
+                    <div class="milestone right">
                         <div class="text">
                             <div class="date">2017.8.1</div>
                             <div class="name">Demo网站上线</div>
                         </div>
                         <div class="icon">
-                            <img src="images/point.png" />
+                            <img src="images/point.png" class="img" />
+                            <img src="images/point-right.png" class="mobile-img" />
                         </div>
                     </div>
                 </div>
@@ -226,25 +237,31 @@
         </div>
         <div id="partners" class="partners  nav-section">
             <div class="container">
-                <div class="title">
+                <div class="main-section-title">
+                    <span class="sep-line"></span>
                     <span class="zh">合作伙伴</span>
                     <span class="en">Partners</span>
+                    <span class="sep-line"></span>
                 </div>
                 <div class="content">
-                    <a class="partner" href="https://www.icoage.com" target="_blank">
-                        <img src="images/partners/icoage.png" />
+                    <a class="partner" href="http://fenbushi.vc" target="_blank">
+                        <img src="images/partners/fenbushi.png" />
                     </a>
+
                     <a class="partner" href="http://www.newchainbase.com" target="_blank">
                         <img src="images/partners/wx-accelerator.png" />
                     </a>
                     <a class="partner" href="http://chainb.com" target="_blank">
                         <img src="images/partners/chainb.png" />
                     </a>
-                    <a class="partner" href="https://yuanben.io" target="_blank">
-                        <img src="images/partners/yuanben.png" />
-                    </a>
                     <a class="partner" href="http://www.blockchainlabs.org" target="_blank">
                         <img src="images/partners/wx-blockchain.png" />
+                    </a>
+                    <a class="partner" href="https://www.icoage.com" target="_blank">
+                        <img src="images/partners/icoage.png" />
+                    </a>
+                    <a class="partner" href="https://yuanben.io" target="_blank">
+                        <img src="images/partners/yuanben.png" />
                     </a>
                 </div>
             </div>
@@ -254,6 +271,12 @@
                 <div class="title">
                     <div class="zh">联系我们</div>
                     <div class="en">Contact us</div>
+                </div>
+                <div class="mobile-qr-code">
+                    <div class="title">长按识别微信二维码</div>
+                    <div class="qr-code">
+
+                    </div>
                 </div>
                 <div class="content">
                     <a class="social" href="javascript:void(0)" target="_blank">
@@ -274,7 +297,7 @@
                         </div>
                         <div class="name">Twitter</div>
                     </a>
-                    <a id="footer-community" class="social" href="javascript:void(0)" target="_blank">
+                    <a id="footer-community" class="social weixin" href="javascript:void(0)" target="_blank">
                         <div class="icon">
                             <img src="images/wechat.png" />
                         </div>

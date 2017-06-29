@@ -36,7 +36,13 @@ var startSolarSystem = function ($p) {
                     $p.translate(planet.pos.x, planet.pos.y);
                 }
                 if ($this_1.parent != null) {
-                    $this_1.pos.x = ($this_1.size + $this_1.parent.size) / 1.2;
+
+                    if(window.innerWidth < 768)
+                    {
+                        $this_1.pos.x = ($this_1.size + $this_1.parent.size) / 4;
+                    }else{
+                        $this_1.pos.x = ($this_1.size + $this_1.parent.size) / 1.2;
+                    }
                 }
                 $p.rotate($this_1.angle);
                 $p.translate($this_1.pos.x, $this_1.pos.y);

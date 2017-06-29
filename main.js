@@ -12,7 +12,7 @@
     var $navItems = null;
     var processingInstance = null;
 
-    var minHeight = 800;
+    var minHeight = 300;
 
     $(function(){
 

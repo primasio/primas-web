@@ -1,0 +1,501 @@
+/* Large Devices, Desktops */
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+
+    .navbar,
+    .navbar-placeholder {
+        height: 80px;
+    }
+
+    .navbar .logo {
+        margin-top: 12px;
+    }
+
+    .navbar .items .item {
+        margin-top: 30px;
+    }
+
+    .navbar.fixed .items .item {
+        padding: 0 18px;
+    }
+
+    .introduction .section.what .image img {
+        width: 100%;
+    }
+
+    .introduction .section .title {
+        font-size: 38px;
+    }
+
+    .introduction .section.strength {
+        margin-top: 90px;
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .introduction .section.strength .item {
+        margin-top: 90px;
+    }
+
+    .introduction .section.strength .item img {
+        width: 100px;
+    }
+
+    .investors {
+        padding: 90px 0;
+    }
+
+    .investors .investor {
+        margin-top: 90px;
+    }
+
+    .investors .investor .photo img {
+        width: 160px;
+    }
+
+    .roadmap {
+        padding-top: 90px;
+    }
+
+    .roadmap .content {
+        margin: 110px 36px;
+    }
+
+    .partners {
+        padding: 90px 0;
+    }
+    .partners .content {
+        margin-top: 20px;
+    }
+    .partners .content .partner {
+        width: 25%;
+    }
+
+    .navbar .weixin-qr-code {
+        top: 83px;
+    }
+
+    .contact .weixin-qr-code {
+        left: 133px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+
+    .navbar,
+    .navbar-placeholder {
+        height: 80px;
+    }
+
+    .navbar .logo {
+        margin-top: 12px;
+    }
+
+    .navbar .items .item {
+        margin-top: 30px;
+        padding: 0 8px;
+    }
+
+    .navbar.fixed .items .item {
+        padding: 0 8px;
+    }
+
+    .face .content {
+        height: 400px;
+    }
+
+    .face .content .slogan {
+        font-size: 38px;
+    }
+
+    .face .content .white-paper {
+        margin-top: 160px;
+    }
+
+    .introduction .section.what .texts {
+        padding-top: 50px;
+    }
+
+    .introduction .section.what .image img {
+        width: 100%;
+    }
+
+    .introduction .section .title {
+        font-size: 28px;
+    }
+
+    .introduction .section.strength {
+        margin-top: 60px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .introduction .section.strength .item {
+        margin-top: 60px;
+    }
+
+    .introduction .section.strength .item img {
+        width: 100px;
+    }
+
+    .introduction .section.strength .item .description {
+        margin-top: 30px;
+    }
+
+    .investors {
+        padding: 60px 0;
+    }
+
+    .investors .investor {
+        margin-top: 60px;
+    }
+
+    .investors .investor .photo img {
+        width: 160px;
+    }
+
+    .investors .investor .intro {
+        font-size: 14px;
+    }
+
+    .roadmap {
+        padding-top: 60px;
+    }
+
+    .roadmap .line {
+        bottom: 26px;
+    }
+
+    .roadmap .content {
+        margin: 50px 16px;
+    }
+
+    .roadmap .content .milestone .text .date {
+        font-size: 22px;
+    }
+    .roadmap .content .milestone .text .name {
+        font-size: 14px;
+    }
+    .roadmap .content .milestone .icon {
+        width: 80px;
+    }
+
+    .roadmap .content .milestone .icon img {
+        width: 40px;
+    }
+
+    .partners {
+        padding: 60px 0;
+    }
+    .partners .content {
+        margin-top: 20px;
+    }
+    .partners .content .partner {
+        width: 33.3%;
+    }
+
+    .contact > .container > .title .zh {
+        font-size: 28px;
+    }
+
+    .contact > .container > .title .en {
+        font-size: 24px;
+    }
+
+    .contact .content .social {
+        margin-right: 40px;
+    }
+
+    .contact .content .social .name {
+        font-size: 16px;
+    }
+
+    .navbar .weixin-qr-code {
+        top: 83px;
+    }
+
+    .navbar .weixin-qr-code .triangle {
+        right: 50px;
+    }
+
+    .contact .weixin-qr-code {
+        left: 40px;
+    }
+
+    .main-section-title .zh {
+        font-size: 28px;
+    }
+
+    .main-section-title .en {
+        font-size: 28px;
+    }
+}
+
+/* Extra Small Devices, Mobile */
+@media only screen and (max-width: 767px) {
+    .container {
+        width: auto;
+        margin: 0 16px;
+    }
+
+    .navbar,
+    .navbar-placeholder {
+        display: none;
+    }
+
+    .face .content .mobile-logo {
+        display: block;
+        font-size: 26px;
+    }
+
+    .face .content .slogan {
+        font-size: 32px;
+    }
+
+    .face .content .description {
+        font-size: 14px;
+    }
+
+    .face .content .white-paper {
+        margin-top: 180px;
+    }
+
+    .introduction .section.what .texts,
+    .introduction .section.what .image {
+        width: auto;
+        float: none;
+    }
+
+    .introduction .section.what .texts {
+        padding-top: 48px;
+    }
+
+    .introduction .section.what .image img {
+        width: 100%;
+    }
+
+    .introduction .section.strength {
+        margin-top: 60px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .introduction .section.strength .item {
+        width: 50%;
+        margin-top: 48px;
+    }
+
+    .introduction .section.strength .item .description {
+        margin-top: 20px;
+    }
+
+    .introduction .section .title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .investors {
+        padding: 48px 0;
+    }
+
+    .investors .investor {
+        margin-top: 48px;
+        width: 50%;
+    }
+
+    .investors .investor img {
+        width: 90%;
+    }
+
+    .investors .investor .intro {
+        font-size: 13px;
+        margin-top: 12px;
+    }
+
+    .roadmap {
+        padding-top: 48px;
+    }
+
+    .roadmap .line {
+        width: 4px;
+        height: 560px;
+        bottom: auto;
+        left: 50%;
+        margin-left: -2px;
+        top: 98px;
+    }
+
+    .roadmap .line .gradient {
+        width: 100%;
+        height: 60px;
+        top: auto;
+    }
+
+    .roadmap .line .gradient.left {
+        background: -webkit-gradient(linear, left top, left bottom, from(#232328), to(#ed5f4b));
+        background: -webkit-linear-gradient(top, #232328, #ed5f4b);
+        background: -moz-linear-gradient(top, #232328, #ed5f4b);
+        background: -ms-linear-gradient(top, #232328, #ed5f4b);
+        background: -o-linear-gradient(top, #232328, #ed5f4b);
+    }
+
+    .roadmap .line .gradient.right {
+        background: -webkit-gradient(linear, left bottom, left top, from(#232328), to(#ed5f4b));
+        background: -webkit-linear-gradient(bottom, #232328, #ed5f4b);
+        background: -moz-linear-gradient(bottom, #232328, #ed5f4b);
+        background: -ms-linear-gradient(bottom, #232328, #ed5f4b);
+        background: -o-linear-gradient(bottom, #232328, #ed5f4b);
+    }
+
+    .roadmap .content {
+        margin: 98px 0;
+    }
+
+    .roadmap .content .milestone {
+        width: auto;
+        float: none;
+        height: 100px;
+    }
+
+    .roadmap .content .milestone .icon {
+        position: absolute;
+        margin: 0 0 0 -35px;
+        top: 0;
+        left: 50%;
+        width: 70px;
+        height: 58px;
+        padding-top: 12px;
+    }
+
+    .roadmap .content .milestone .icon img {
+        width: 40px;
+    }
+
+    .roadmap .content .milestone .icon .img {
+        display: none;
+    }
+
+    .roadmap .content .milestone .icon .mobile-img {
+        display: inline;
+    }
+
+    .roadmap .content .milestone.left .text {
+        float: left;
+        margin-left: 24px;
+    }
+
+    .roadmap .content .milestone.right .text {
+        float: right;
+        margin-right: 24px;
+    }
+
+    .roadmap .content .milestone .text .date {
+        font-size: 24px;
+    }
+
+    .roadmap .content .milestone .text .name {
+        font-size: 16px;
+    }
+
+    .roadmap .line .left {
+        top: 0;
+    }
+
+    .roadmap .line .right {
+        bottom: 0;
+    }
+
+    .partners {
+        padding: 48px 0;
+    }
+
+    .partners .content {
+        margin-top: 0;
+    }
+
+    .partners .content .partner {
+        width: 50%;
+        margin-top: 58px;
+    }
+
+    .partners .content .partner img {
+        width: 90%;
+    }
+
+    .contact {
+        padding: 48px 0;
+    }
+
+    .contact > .container > .title {
+        position: relative;
+        width: auto;
+        height: auto;
+    }
+
+    .contact > .container > .title .zh {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .contact > .container > .title .en {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .contact .social.weixin {
+        display: none;
+    }
+
+    .contact .mobile-qr-code {
+        display: block;
+        margin-top: 28px;
+    }
+
+    .contact .mobile-qr-code .title {
+        text-align: center;
+        font-size: 14px;
+        color: #ffffff;
+    }
+
+    .contact .mobile-qr-code .qr-code {
+        width: 80%;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .contact .content {
+        margin: 0;
+        height: auto;
+        overflow: auto;
+    }
+
+    .contact .content .social {
+        width: 33.3%;
+        margin-right: 0;
+    }
+
+    .contact .content .social .icon {
+        margin: 0 auto;
+    }
+
+    .main-section-title .zh {
+        font-size: 20px;
+    }
+
+    .main-section-title .en {
+        font-size: 20px;
+    }
+}
