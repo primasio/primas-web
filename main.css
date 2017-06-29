@@ -1,0 +1,547 @@
+html,
+body {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: 'PingFang SC', 'HanHei SC', 'Microsoft YaHei', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+    -webkit-overflow-scrolling: touch;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.navbar,
+.navbar-placeholder {
+    position: relative;
+    height: 100px;
+}
+
+.navbar {
+    z-index: 10000;
+    color: #ffffff;
+}
+
+.navbar-placeholder.hide {
+    display: none;
+}
+
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #232328;
+    color: #ed5f4b;
+}
+
+.navbar .logo {
+    position: relative;
+    float: left;
+    font-size: 36px;
+    margin-top: 32px;
+    margin-left: 30px;
+}
+
+.navbar .items {
+    position: relative;
+    float: right;
+    text-align: right;
+}
+.navbar .items .item {
+    display: inline-block;
+    height: 50px;
+    margin-top: 50px;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 16px;
+}
+
+.navbar.fixed .items .item {
+    font-size: 18px;
+    color: #ed5f4b;
+    padding: 0 28px;
+}
+
+.navbar .items .item:hover,
+.navbar .items .item.active {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.navbar.fixed .items .item:hover,
+.navbar.fixed .items .item.active {
+    border-bottom: 3px solid #ed5f4b;
+}
+
+.weixin-qr-code {
+    display: none;
+    width: 200px;
+    height: 240px;
+    padding: 16px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+.weixin-qr-code.active {
+    display: block;
+}
+
+.weixin-qr-code .title {
+    text-align: center;
+    font-size: 14px;
+    color: #232328;
+}
+
+.navbar .weixin-qr-code .triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 60px;
+    top: -14px;
+    border: 14px #ffffff solid;
+    border-top-width: 0;
+    border-left-color: rgba(0,0,0,0);
+    border-right-color: rgba(0,0,0,0);
+}
+
+.navbar .weixin-qr-code {
+    position: absolute;
+    top: 104px;
+    right: -20px;
+}
+
+.face {
+    position: relative;
+    height: 900px;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.face .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.face .content {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    left: 50%;
+    margin-left: -200px;
+    top: 100px;
+    z-index: 2;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0;
+
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.face .content.show {
+    opacity: 1;
+}
+
+.face .content .slogan {
+    font-size: 48px;
+}
+
+.face .content .description {
+    font-size: 16px;
+    margin-top: 24px;
+}
+
+.face .content .description .line {
+    margin-top: 12px;
+}
+
+.face .content .white-paper {
+    margin-top: 240px;
+}
+
+.face .content .white-paper a {
+    display: inline-block;
+    width: 236px;
+    height: 60px;
+    line-height: 60px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 16px;
+
+    background-color: #ed5f4b;
+
+    background: -webkit-gradient(linear, left top, right top, from(#df8636), to(#ed5f4b));
+    background: -webkit-linear-gradient(left, #df8636, #ed5f4b);
+    background: -moz-linear-gradient(left, #df8636, #ed5f4b);
+    background: -ms-linear-gradient(left, #df8636, #ed5f4b);
+    background: -o-linear-gradient(left, #df8636, #ed5f4b);
+}
+
+.face .content .white-paper a:hover {
+    background-color: #fd6f5b;
+
+    background: -webkit-gradient(linear, left top, right top, from(#ef9646), to(#fd6f5b));
+    background: -webkit-linear-gradient(left, #ef9646, #fd6f5b);
+    background: -moz-linear-gradient(left, #ef9646, #fd6f5b);
+    background: -ms-linear-gradient(left, #ef9646, #fd6f5b);
+    background: -o-linear-gradient(left, #ef9646, #fd6f5b);
+}
+
+.face .content .white-paper a:active {
+    background-color: #dd4f3b;
+
+    background: -webkit-gradient(linear, left top, right top, from(#cf7626), to(#dd4f3b));
+    background: -webkit-linear-gradient(left, #cf7626, #dd4f3b);
+    background: -moz-linear-gradient(left, #cf7626, #dd4f3b);
+    background: -ms-linear-gradient(left, #cf7626, #dd4f3b);
+    background: -o-linear-gradient(left, #cf7626, #dd4f3b);
+}
+
+.introduction {
+    position: relative;
+    background-color: #232328;
+    font-size: 16px;
+    color: #ffffff;
+}
+.introduction .section {
+    position: relative;
+    overflow: auto;
+}
+.introduction .section.what {
+    overflow: auto;
+}
+.introduction .section.what .texts .content {
+    margin-top: 50px;
+}
+.introduction .section.what .texts {
+    width: 40%;
+    float: left;
+    padding-top: 150px;
+}
+.introduction .section.what .image {
+    width: 40%;
+    float: right;
+    padding-top: 50px;
+}
+.introduction .section .title {
+    font-size: 48px;
+    color: #ed5f4b;
+}
+
+.introduction .section.strength {
+    margin-top: 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.introduction .section.strength .item {
+    width: 20%;
+    float: left;
+    text-align: center;
+    margin-top: 124px;
+    color: #ed5f4b;
+}
+
+.introduction .section.strength .item .description {
+    margin-top: 70px;
+}
+
+.team {
+    position: relative;
+    background-color: rgb(218, 220, 215);
+    height: 700px;
+    padding-top: 280px;
+}
+
+.team .title {
+    color: #ed5f4b;
+}
+
+.team .title .zh {
+    font-size: 36px;
+}
+
+.team .title .en {
+    font-size: 60px;
+}
+
+.investors {
+    position: relative;
+    padding: 110px 0;
+    overflow: auto;
+}
+
+.investors .title {
+    text-align: center;
+    color: #232328;
+    padding-bottom: 26px;
+}
+
+.investors .title .zh {
+    font-size: 36px;
+}
+
+.investors .title .en {
+    font-size: 30px;
+}
+
+.investors .investor {
+    margin-top: 64px;
+    width: 25%;
+    text-align: center;
+    float: left;
+}
+
+.investors .investor .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 24px;
+}
+
+.investors .investor .intro {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.roadmap {
+    position: relative;
+    padding-top: 110px;
+    padding-bottom: 1px;
+    background-color: #232328;
+}
+
+.roadmap .title {
+    text-align: center;
+    color: #ffffff;
+}
+
+.roadmap .title .zh {
+    font-size: 36px;
+}
+
+.roadmap .title .en {
+    font-size: 30px;
+}
+
+.roadmap .line {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: 30px;
+    background-color: #ed5f4b;
+    z-index: 1;
+}
+
+.roadmap .line .gradient {
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    top: 0;
+}
+
+.roadmap .line .gradient.left {
+
+    background-color: #ed5f4b;
+    background-repeat: repeat-y;
+
+    background: -webkit-gradient(linear, left top, right top, from(#232328), to(#ed5f4b));
+    background: -webkit-linear-gradient(left, #232328, #ed5f4b);
+    background: -moz-linear-gradient(left, #232328, #ed5f4b);
+    background: -ms-linear-gradient(left, #232328, #ed5f4b);
+    background: -o-linear-gradient(left, #232328, #ed5f4b);
+
+    left: 0;
+}
+
+.roadmap .line .gradient.right {
+
+    background-color: #ed5f4b;
+    background-repeat: repeat-y;
+
+    background: -webkit-gradient(linear, left top, right top, from(#ed5f4b), to(#232328));
+    background: -webkit-linear-gradient(left, #ed5f4b, #232328);
+    background: -moz-linear-gradient(left, #ed5f4b, #232328);
+    background: -ms-linear-gradient(left, #ed5f4b, #232328);
+    background: -o-linear-gradient(left, #ed5f4b, #232328);
+
+    right: 0;
+}
+
+.roadmap .content {
+    position: relative;
+    margin: 170px 36px;
+    overflow: auto;
+    z-index: 2;
+}
+
+.roadmap .content .milestone {
+    position: relative;
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+
+.roadmap .content .milestone .text {
+    color: #ffffff;
+}
+
+.roadmap .content .milestone .text .date {
+    font-size: 30px;
+    font-family: 'Georgia', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+.roadmap .content .milestone .text .name {
+    font-size: 18px;
+}
+
+.roadmap .content .milestone .icon {
+    position: relative;
+    width: 100px;
+    margin: 56px auto 0;
+    background-color: #232328;
+}
+
+.partners {
+    position: relative;
+    background-color: #ffffff;
+    padding: 110px 0;
+}
+
+.partners .title {
+    text-align: center;
+    color: #232328;
+}
+
+.partners .title .zh {
+    font-size: 36px;
+}
+
+.partners .title .en {
+    font-size: 30px;
+}
+
+.partners .content {
+    margin-top: 120px;
+    overflow: auto;
+}
+
+.partners .content .partner {
+    position: relative;
+    width: 20%;
+    text-align: center;
+    float: left;
+}
+
+.contact {
+    position: relative;
+    background-color: #ed5f4b;
+    padding: 110px 0;
+}
+
+.contact > .container > .title {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    left: 0;
+    top: 0;
+    color: #ffffff;
+}
+
+.contact > .container > .title .zh {
+    font-size: 36px;
+}
+
+.contact > .container > .title .en {
+    font-size: 30px;
+}
+
+.contact .content {
+    position: relative;
+    margin-left: 200px;
+    height: 150px;
+}
+
+.contact .content .social {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    width: 70px;
+    float: right;
+    margin-right: 70px;
+    opacity: 0.7;
+}
+
+.contact .content .social:hover {
+    opacity: 1;
+}
+
+.contact .content .social .icon {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: #ffffff;
+}
+
+.contact .content .social .icon img {
+    position: absolute;
+    display: block;
+    width: 38px;
+    height: 38px;
+    left: 16px;
+    top: 16px;
+}
+
+.contact .content .social .name {
+    margin-top: 16px;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+}
+
+.contact .weixin-qr-code {
+    position: absolute;
+    top: -270px;
+    left: 338px
+}
+
+.contact .weixin-qr-code .triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 80px;
+    bottom: -14px;
+    border: 14px #ffffff solid;
+    border-bottom-width: 0;
+    border-left-color: rgba(0,0,0,0);
+    border-right-color: rgba(0,0,0,0);
+}
+
+.copyright {
+    position: relative;
+    background-color: #ed5f4b;
+    color: #ad1f0b;
+    border-top: 1px solid #dd4f3b;
+    text-align: center;
+    font-size: 16px;
+    padding: 24px;
+}
