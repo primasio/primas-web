@@ -157,10 +157,10 @@ a img {
 
 .face .content {
     position: absolute;
-    width: 400px;
+    width: 500px;
     height: 500px;
     left: 50%;
-    margin-left: -200px;
+    margin-left: -250px;
     top: 100px;
     z-index: 2;
     text-align: center;
@@ -308,9 +308,10 @@ a img {
     background-size:100% 100% ;
     box-sizing: border-box;
     height: 700px;
-    padding-top: 280px;
 }
-
+.team .container{
+    padding-top: 14%;
+}
 .team .title {
     color: #ed5f4b;
 }
@@ -432,6 +433,7 @@ a img {
 
 .roadmap .content .milestone .text .name {
     font-size: 18px;
+    margin-top: 5px;
 }
 
 .roadmap .content .milestone .icon {
