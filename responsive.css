@@ -49,6 +49,9 @@
     .introduction .section.strength .item img {
         width: 100px;
     }
+    .team{
+        height: 600px;
+    }
 
     .investors {
         padding: 90px 0;
@@ -124,11 +127,15 @@
     .face .content .white-paper {
         margin-top: 160px;
     }
-
+    .team{
+        height: 400px;
+    }
     .introduction .section.what .texts {
         padding-top: 50px;
     }
-
+    .introduction .section.what .texts .demo{
+        margin-top: 40px;
+    }
     .introduction .section.what .image img {
         width: 100%;
     }
@@ -152,7 +159,7 @@
     }
 
     .introduction .section.strength .item .description {
-        margin-top: 30px;
+        margin-top: 15px;
     }
 
     .investors {
@@ -282,7 +289,9 @@
     .introduction .section.what .texts {
         padding-top: 48px;
     }
-
+    .introduction .section.what .texts .demo{
+        margin-top: 50px;
+    }
     .introduction .section.what .image img {
         width: 100%;
     }
@@ -299,14 +308,31 @@
     }
 
     .introduction .section.strength .item .description {
-        margin-top: 20px;
+        margin-top: 0px;
     }
-
+    .introduction .section.strength .item img{
+        width: 70px;
+    }
     .introduction .section .title {
         font-size: 28px;
         text-align: center;
     }
 
+    .team{
+        padding-top: 48px;
+        background:url(images/our-team-phone.png) no-repeat rgb(218, 220, 215);
+        background-size:100% 100% ;
+    }
+    .team .title{
+        text-align: center;
+    }
+    .team .title .zh {
+        font-size: 28px;
+    }
+
+    .team .title .en {
+        font-size: 24px;
+    }
     .investors {
         padding: 48px 0;
     }
@@ -391,7 +417,14 @@
     .roadmap .content .milestone .icon .mobile-img {
         display: inline;
     }
-
+    .mobile-img-right {
+        position: relative;
+        left: 4px;
+    }
+    .mobile-img-left {
+        position: relative;
+        right: 4px;
+    }
     .roadmap .content .milestone.left .text {
         float: left;
         margin-left: 24px;

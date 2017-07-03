@@ -17,6 +17,10 @@ a img {
     border: 0;
     outline: none;
 }
+.f12{font-size:12px}
+.f14{font-size:14px}
+.f16{font-size:16px}
+.f18{font-size:18px}
 
 .container {
     position: relative;
@@ -51,7 +55,9 @@ a img {
 .navbar .logo {
     position: relative;
     float: left;
-    font-size: 36px;
+    width: 182px;
+    height: 50px;
+    background: url(images/logo.png) center ;
     margin-top: 32px;
     margin-left: 30px;
 }
@@ -209,10 +215,14 @@ a img {
     background: -ms-linear-gradient(left, #df8636, #ed5f4b);
     background: -o-linear-gradient(left, #df8636, #ed5f4b);
 }
-
+.primas-white-paper-tip {
+    display: block;
+    line-height: 3;
+    font-size: 14px;
+    opacity: 0.7;
+}
 .face .content .white-paper a:hover {
     background-color: #fd6f5b;
-
     background: -webkit-gradient(linear, left top, right top, from(#ef9646), to(#fd6f5b));
     background: -webkit-linear-gradient(left, #ef9646, #fd6f5b);
     background: -moz-linear-gradient(left, #ef9646, #fd6f5b);
@@ -245,6 +255,18 @@ a img {
 }
 .introduction .section.what .texts .content {
     margin-top: 50px;
+    line-height: 2;
+}
+.introduction .section.what .texts .demo {
+    width: 235px;
+    height: 70px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    background: url(images/apple.png) 190px center no-repeat #EDEDED;
+    border-radius:5px ;
+    line-height: 1.8;
+    color: #333333;
+    margin-top: 120px;
 }
 .introduction .section.what .texts {
     width: 40%;
@@ -277,12 +299,14 @@ a img {
 }
 
 .introduction .section.strength .item .description {
-    margin-top: 70px;
+    margin-top: 35px;
 }
 
 .team {
     position: relative;
-    background-color: rgb(218, 220, 215);
+    background:url(images/ourteam.png) no-repeat rgb(218, 220, 215);
+    background-size:100% 100% ;
+    box-sizing: border-box;
     height: 700px;
     padding-top: 280px;
 }
@@ -298,7 +322,7 @@ a img {
 .team .title .en {
     font-size: 60px;
 }
-
+.ourteambg{width: 100%}
 .investors {
     position: relative;
     padding: 110px 0;
