@@ -123,7 +123,7 @@ var startSolarSystem = function ($p) {
     $p.setup = setup;
     setup = setup.bind($p);
     function draw() {
-        if (allPlanets.get(0).size <= (window.innerWidth < 768?180:160)) {
+        if (allPlanets.get(0).size <= (window.innerWidth < 768?180:100)) {
             return;
         }
         for (var $it1 = new $p.ObjectIterator(allPlanets), p = void(0); $it1.hasNext() && ((p = $it1.next()) || true);) {
