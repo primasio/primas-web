@@ -82,7 +82,7 @@ a img {
     color: #ed5f4b;
     padding: 0 28px;
 }
-
+#navbar-community:hover{border:none;}
 .navbar .items .item:hover,
 .navbar .items .item.active {
     border-bottom: 1px solid rgba(255, 255, 255, 0.7);
@@ -322,6 +322,42 @@ a img {
 
 .team .title .en {
     font-size: 60px;
+    font-weight: bold;
+}
+.team .summary {
+    font-size: 30px;
+    font-style: italic;
+    color: #232328;
+    margin-top: 30px;
+    position: relative;
+    line-height: 1;
+}
+.team .summary:after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 653px;
+    background: #ed5f4b;
+    left: 0;
+    bottom: 3px;
+}
+.team .summary .bot-block{
+    padding-left: 24px;
+}
+.team .summary span {
+    color: #ed5f4b;
+    font-size: 40px;
+    /* font-weight: bold; */
+    font-family: fantasy;
+}
+.team .summary .icon-top {
+    padding-right: 10px;
+}
+
+.team .summary .icon-bottom {
+    padding-left: 10px;
+    position: relative;
+    bottom: -27px;
 }
 .ourteambg{width: 100%}
 .investors {

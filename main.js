@@ -32,14 +32,11 @@
             adjustNavbar();
         });
 
-        $('#navbar-community').on('click', function(e){
-            if($('#navbar-qr-code').hasClass('active'))
-            {
-                $('#navbar-qr-code').removeClass('active');
-            }else{
-                $('#navbar-qr-code').addClass('active');
-            }
-
+        $('#navbar-community').on('mouseenter', function(e){
+            $('#navbar-qr-code').addClass('active');
+            e.stopPropagation();
+        }).on('mouseleave', function(e){
+            $('#navbar-qr-code').removeClass('active');
             e.stopPropagation();
         });
 

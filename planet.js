@@ -70,7 +70,7 @@ var startSolarSystem = function ($p) {
                 if (globalHue > 255) {
                     globalHue = 0;
                 }
-                var newAngleRate = 0.025;
+                var newAngleRate = 0.015;
                 var newReverseAngleRate = false;
                 if ($p.parseInt($p.random(2)) == 1) {
                     newReverseAngleRate = true;
@@ -116,14 +116,14 @@ var startSolarSystem = function ($p) {
         $p.size(window.innerWidth, 600);
         $p.ellipseMode($p.CENTER);
         $p.colorMode($p.HSB, 255);
-        $p.frameRate(20);
+        $p.frameRate(10);
         reset();
     }
 
     $p.setup = setup;
     setup = setup.bind($p);
     function draw() {
-        if (allPlanets.get(0).size <= 100) {
+        if (allPlanets.get(0).size <= (window.innerWidth < 768?180:160)) {
             return;
         }
         for (var $it1 = new $p.ObjectIterator(allPlanets), p = void(0); $it1.hasNext() && ((p = $it1.next()) || true);) {

@@ -52,7 +52,30 @@
     .team{
         height: 600px;
     }
+    .team .title .zh {
+        font-size: 26px;
+    }
 
+    .team .title .en {
+        font-size: 40px;
+    }
+    .team .summary {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+    .team .summary:after {
+        width: 538px;
+        bottom: 3px;
+    }
+    .team .summary .bot-block{
+        padding-left: 15px;
+    }
+    .team .summary span {
+        font-size: 30px;
+    }
+    .team .summary .icon-bottom {
+        bottom: -18px;
+    }
     .investors {
         padding: 90px 0;
     }
@@ -129,6 +152,30 @@
     }
     .team{
         height: 400px;
+    }
+    .team .title .zh {
+        font-size: 24px;
+    }
+
+    .team .title .en {
+        font-size: 32px;
+    }
+    .team .summary {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .team .summary:after {
+        width: 439px;
+        bottom: 3px;
+    }
+    .team .summary .bot-block{
+        padding-left: 15px;
+    }
+    .team .summary .icon-bottom {
+        bottom: -15px;
+    }
+    .team .summary span {
+        font-size: 25px;
     }
     .introduction .section.what .texts {
         padding-top: 50px;
@@ -339,6 +386,29 @@
 
     .team .title .en {
         font-size: 24px;
+    }
+    .team .summary {
+        font-size: 16px;
+        margin-top: 38px;
+    }
+    .team .summary:after {
+        width: 340px;
+        bottom: 3px;
+    }
+    .team .summary .bot-block{
+        padding-left: 0;
+    }
+    .team .summary span {
+        font-size: 25px;
+        font-family: 'PingFang SC', 'HanHei SC', 'Microsoft YaHei', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+    }
+    .team .summary .icon-top {
+        padding-right: 4px;
+    }
+
+    .team .summary .icon-bottom {
+        padding-left: 4px;
+        bottom: -18px;
     }
     .investors {
         padding: 48px 0;
