@@ -66,6 +66,11 @@
         adjustNavbar();
 
         $faceContent.addClass('show');
+        $("[data-track]").on("click", function () {
+            var label = $(this).data("track");
+            window._hmt && window._hmt.push(['_trackEvent', label, 'click']);
+        });
+
     });
 
     function adjustPageSize()
