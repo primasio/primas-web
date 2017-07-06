@@ -70,6 +70,15 @@
             var label = $(this).data("track");
             window._hmt && window._hmt.push(['_trackEvent', label, 'click']);
         });
+        $('.lazyload').each(function () {
+            var $this=$(this);
+            var src=$this.data('src');
+            var img=new Image();
+            img.src=src;
+            img.onload=function () {
+                $this[0].src=src;
+            }
+        })
 
     });
 
