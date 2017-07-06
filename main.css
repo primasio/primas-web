@@ -308,16 +308,17 @@ a img {
 
 .team {
     position: relative;
-    background:url(images/ourteam.png) no-repeat rgb(218, 220, 215);
-    background-size:100% 100% ;
+    background: url(images/ourteam.png) center bottom no-repeat rgb(218, 220, 215);
+    background-size: auto 120%;
     box-sizing: border-box;
     height: 700px;
 }
-.team .container{
-    padding-top: 14%;
+.team .container {
+    padding-top: 70px;
 }
 .team .title {
     color: #ed5f4b;
+    text-align: center;
 }
 
 .team .title .zh {
@@ -325,7 +326,7 @@ a img {
 }
 
 .team .title .en {
-    font-size: 60px;
+    font-size: 40px;
     font-weight: bold;
 }
 .team .summary {

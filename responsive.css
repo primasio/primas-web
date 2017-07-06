@@ -50,14 +50,17 @@
         width: 100px;
     }
     .team{
-        height: 600px;
+        height: 510px;
+    }
+    .team .container {
+        padding-top: 40px;
     }
     .team .title .zh {
         font-size: 26px;
     }
 
     .team .title .en {
-        font-size: 40px;
+        font-size: 24px;
     }
     .team .summary {
         font-size: 24px;
@@ -151,7 +154,7 @@
         margin-top: 160px;
     }
     .team{
-        height: 400px;
+        height: 420px;
     }
     .team .title .zh {
         font-size: 24px;
@@ -369,24 +372,26 @@
         text-align: center;
     }
 
-    .team{
-        background:url(images/our-team-phone.png) no-repeat rgb(218, 220, 215);
-        background-size:100% 100% ;
-        height: 600px!important;
-    }
-    .team .container{
-        padding-top: 48px;
-    }
-    .team .title{
-        text-align: center;
-    }
-    .team .title .zh {
-        font-size: 28px;
-    }
+    /*.team {*/
+    /*position: relative;*/
+    /*background: url(images/ourteam.png) center bottom no-repeat rgb(218, 220, 215);*/
+    /*background-size: 162%;*/
+    /*box-sizing: border-box;*/
+    /*height: 251px;*/
+    /*}*/
+    /*.team .container{*/
+    /*padding-top: 20px;*/
+    /*}*/
+    /*.team .title{*/
+    /*text-align: center;*/
+    /*}*/
+    /*.team .title .zh {*/
+    /*font-size: 20px;*/
+    /*}*/
 
-    .team .title .en {
-        font-size: 24px;
-    }
+    /*.team .title .en {*/
+    /*font-size: 14px;*/
+    /*}*/
     .team .summary {
         font-size: 15px;
         margin-top: 38px;
@@ -609,6 +614,50 @@
         font-size: 20px;
     }
 }
+@media only screen and (max-width: 767px) and (min-width: 520px) {
+    .team {
+        position: relative;
+        background: url(images/ourteam.png) center bottom no-repeat rgb(218, 220, 215);
+        background-size: 162%;
+        box-sizing: border-box;
+        height: 360px;
+    }
+    .team .container{
+        padding-top: 20px;
+    }
+    .team .title{
+        text-align: center;
+    }
+    .team .title .zh {
+        font-size: 24px;
+    }
+
+    .team .title .en {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 519px) {
+    .team {
+        position: relative;
+        background: url(images/ourteam.png) center bottom no-repeat rgb(218, 220, 215);
+        background-size: 162%;
+        box-sizing: border-box;
+        height: 251px;
+    }
+    .team .container{
+        padding-top: 20px;
+    }
+    .team .title{
+        text-align: center;
+    }
+    .team .title .zh {
+        font-size: 20px;
+    }
+
+    .team .title .en {
+        font-size: 14px;
+    }
+}
 @media only screen and (max-width: 374px) {
     .face .content .white-paper a {
         width: 200px;
@@ -621,6 +670,26 @@
     }
     .face .content .slogan {
         font-size: 26px;
+    }
+    .team {
+        position: relative;
+        background: url(images/ourteam.png) center bottom no-repeat rgb(218, 220, 215);
+        background-size: 162%;
+        box-sizing: border-box;
+        height: 200px;
+    }
+    .team .container{
+        padding-top: 20px;
+    }
+    .team .title{
+        text-align: center;
+    }
+    .team .title .zh {
+        font-size: 20px;
+    }
+
+    .team .title .en {
+        font-size: 14px;
     }
     .team .summary {
         font-size: 14px;

@@ -12,7 +12,7 @@
     var $navItems = null;
     var processingInstance = null;
     var minHeight = 300;
-    var radio=1920/700;
+    var radio=1920/817;
     var updateHeight = window.innerHeight >= minHeight ? window.innerHeight : minHeight;
 
 
@@ -77,7 +77,7 @@
 
         $faceContent.css('top', (updateHeight - $faceContent.height() + navbarHeight) / 2);
 
-        $('#team').height(window.innerWidth/radio)
+        //$('#team').height(window.innerWidth/radio)
     }
 
     function adjustNavbar()
