@@ -13,84 +13,69 @@
     var processingInstance = null;
     var minHeight = 300;
     var radio=1920/700;
+    var updateHeight = window.innerHeight >= minHeight ? window.innerHeight : minHeight;
 
-    $(function(){
 
-        $face = $('#face');
-        $faceContent = $face.find('.content');
-        $navbar = $('#navbar');
-        $navbarPlaceholder = $('#navbar-placeholder');
-        navbarHeight = $navbar.height();
-        $navItems = $navbar.find('.item');
-        $sections = $('.nav-section');
-
-        $(window).resize(function() {
-            adjustPageSize();
-        });
-
-        $(document).scroll(function(){
-            adjustNavbar();
-        });
-
-        $('#navbar-community').on('mouseenter', function(e){
-            $('#navbar-qr-code').addClass('active');
-            e.stopPropagation();
-        }).on('mouseleave', function(e){
-            $('#navbar-qr-code').removeClass('active');
-            e.stopPropagation();
-        });
-
-        $('#footer-community').on('click', function(e){
-            if($('#footer-qr-code').hasClass('active'))
-            {
-                $('#footer-qr-code').removeClass('active');
-            }else{
-                $('#footer-qr-code').addClass('active');
-            }
-
-            e.stopPropagation();
-        });
-
-        $('body').on('click', function(){
-            $('.weixin-qr-code').removeClass('active');
-        });
-
-        $('.weixin-qr-code').on('click', function(e){
-            e.stopPropagation();
-        });
-
-        var canvas = document.getElementById("intro-bg");
-        processingInstance = new Processing(canvas, startSolarSystem);
-
-        adjustPageSize();
-        adjustNavbar();
-
-        $faceContent.addClass('show');
-        $("[data-track]").on("click", function () {
-            var label = $(this).data("track");
-            window._hmt && window._hmt.push(['_trackEvent', label, 'click']);
-        });
-        $('.lazyload').each(function () {
-            var $this=$(this);
-            var src=$this.data('src');
-            var img=new Image();
-            img.src=src;
-            img.onload=function () {
-                $this[0].src=src;
-            }
-        })
-
+    $face = $('#face');
+    $faceContent = $face.find('.content');
+    $navbar = $('#navbar');
+    $navbarPlaceholder = $('#navbar-placeholder');
+    navbarHeight = $navbar.height();
+    $navItems = $navbar.find('.item');
+    $sections = $('.nav-section');
+    $faceContent.addClass('show');
+    adjustPageSize();
+    adjustNavbar();
+    $('#navbar-community').on('mouseenter', function(e){
+        $('#navbar-qr-code').addClass('active');
+        e.stopPropagation();
+    }).on('mouseleave', function(e){
+        $('#navbar-qr-code').removeClass('active');
+        e.stopPropagation();
     });
+
+    $('#footer-community').on('click', function(e){
+        if($('#footer-qr-code').hasClass('active'))
+        {
+            $('#footer-qr-code').removeClass('active');
+        }else{
+            $('#footer-qr-code').addClass('active');
+        }
+
+        e.stopPropagation();
+    });
+
+    $('body').on('click', function(){
+        $('.weixin-qr-code').removeClass('active');
+    });
+
+    $('.weixin-qr-code').on('click', function(e){
+        e.stopPropagation();
+    });
+
+    var canvas = document.getElementById("intro-bg");
+
+    $("[data-track]").on("click", function () {
+        var label = $(this).data("track");
+        window._hmt && window._hmt.push(['_trackEvent', label, 'click']);
+    });
+    $('.lazyload').each(function () {
+        var $this=$(this);
+        var src=$this.data('src');
+        var img=new Image();
+        img.src=src;
+        img.onload=function () {
+            $this[0].src=src;
+        }
+    })
+
 
     function adjustPageSize()
     {
-        var updateHeight = window.innerHeight >= minHeight ? window.innerHeight : minHeight;
 
         $face.height(updateHeight);
 
         $faceContent.css('top', (updateHeight - $faceContent.height() + navbarHeight) / 2);
-
-        processingInstance.resizeSketch(updateHeight);
 
         $('#team').height(window.innerWidth/radio)
     }
@@ -126,7 +111,20 @@
         });
     }
 
+    $(window).resize(function() {
+        processingInstance.resizeSketch(updateHeight);
+        adjustPageSize();
+    });
 
+    $(document).scroll(function(){
+        adjustNavbar();
+    });
+
+    $(function () {
+        processingInstance = new Processing(canvas, startSolarSystem);
+        processingInstance.resizeSketch(updateHeight);
+
+    });
 })();
 
 
