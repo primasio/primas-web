@@ -388,7 +388,7 @@
         font-size: 24px;
     }
     .team .summary {
-        font-size: 16px;
+        font-size: 15px;
         margin-top: 38px;
     }
     .team .summary:after {
@@ -504,12 +504,13 @@
     }
     .roadmap .content .milestone.left .text {
         float: left;
-        margin-left: 24px;
+        margin-left: 35px;
     }
 
     .roadmap .content .milestone.right .text {
         float: right;
-        margin-right: 24px;
+        width: 140px;
+        text-align: center;
     }
 
     .roadmap .content .milestone .text .date {
@@ -606,5 +607,39 @@
 
     .main-section-title .en {
         font-size: 20px;
+    }
+}
+@media only screen and (max-width: 374px) {
+    .face .content .white-paper a {
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .team .container {
+        width: auto;
+        margin: 0 5px;
+    }
+    .face .content .slogan {
+        font-size: 26px;
+    }
+    .team .summary {
+        font-size: 14px;
+        margin-top: 38px;
+        word-spacing: -1px;
+        letter-spacing: 0px;
+    }
+    .team .summary:after {
+        width: 298px;
+    }
+    .roadmap .content .milestone .text .name {
+        font-size: 14px;
+    }
+    .roadmap .content .milestone.right .text {
+        float: right;
+        width: 140px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        padding-left: 20px;
     }
 }

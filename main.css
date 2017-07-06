@@ -7,6 +7,8 @@ body {
     font-family: 'PingFang SC', 'HanHei SC', 'Microsoft YaHei', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
     -webkit-overflow-scrolling: touch;
     -webkit-font-smoothing: antialiased;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 * {
@@ -21,6 +23,7 @@ a img {
 .f14{font-size:14px}
 .f16{font-size:16px}
 .f18{font-size:18px}
+.fb{font-weight: bold}
 
 .container {
     position: relative;
@@ -261,10 +264,10 @@ a img {
     width: 235px;
     height: 70px;
     box-sizing: border-box;
-    padding: 10px 15px;
+    padding:15px 15px 10px 15px;
     background: url(images/apple.png) 190px center no-repeat #EDEDED;
     border-radius:5px ;
-    line-height: 1.8;
+    line-height: 1.5;
     color: #333333;
     margin-top: 120px;
 }
