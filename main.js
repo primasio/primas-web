@@ -112,8 +112,9 @@
     }
 
     $(window).resize(function() {
-        processingInstance.resizeSketch(updateHeight);
         adjustPageSize();
+        updateHeight = window.innerHeight >= minHeight ? window.innerHeight : minHeight
+        processingInstance.resizeSketch(updateHeight);
     });
 
     $(document).scroll(function(){

@@ -58,11 +58,12 @@ a img {
 .navbar .logo {
     position: relative;
     float: left;
-    width: 182px;
-    height: 50px;
-    background: url(images/logo.png) center ;
+    width: 145px;
+    height: 40px;
+    background: url(images/logo.png) center no-repeat;
     margin-top: 32px;
     margin-left: 30px;
+    background-size: 100% 100%;
 }
 
 .navbar .items {
@@ -73,7 +74,7 @@ a img {
 .navbar .items .item {
     display: inline-block;
     height: 50px;
-    margin-top: 50px;
+    margin-top: 44px;
     font-size: 16px;
     color: #ffffff;
     text-decoration: none;
