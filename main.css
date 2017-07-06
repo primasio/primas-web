@@ -308,7 +308,7 @@ a img {
 
 .team {
     position: relative;
-    background: url(images/ourteam.png) center bottom no-repeat rgb(218, 220, 215);
+    background: url('images/ourteam.jpg') center bottom no-repeat rgb(218, 220, 215);
     background-size: auto 120%;
     box-sizing: border-box;
     height: 700px;
