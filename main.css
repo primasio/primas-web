@@ -60,7 +60,7 @@ a img {
     float: left;
     width: 145px;
     height: 40px;
-    background: url(images/logo.png) center no-repeat;
+    background: url(https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/logo.png) center no-repeat;
     margin-top: 32px;
     margin-left: 30px;
     background-size: 100% 100%;
@@ -139,7 +139,7 @@ a img {
     display: inline-block;
     width: 16px;
     height: 38px;
-    background-image: url('images/line.png');
+    background-image: url('https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/line.png');
 }
 
 .face {
@@ -262,15 +262,14 @@ a img {
     line-height: 2;
 }
 .introduction .section.what .texts .demo {
-    width: 235px;
-    height: 70px;
-    box-sizing: border-box;
-    padding:15px 15px 10px 15px;
-    background: url(images/apple.png) 190px center no-repeat #EDEDED;
-    border-radius:5px ;
-    line-height: 1.5;
-    color: #333333;
+    width: 180px;
     margin-top: 120px;
+    line-height: 2;
+    font-size: 14px;
+    color: #ccc;
+}
+.ios-download-phone{
+    display: none;
 }
 .introduction .section.what .texts {
     width: 40%;
@@ -308,7 +307,7 @@ a img {
 
 .team {
     position: relative;
-    background: url('images/ourteam.jpg') center bottom no-repeat rgb(218, 220, 215);
+    background: url('https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/ourteam.jpg') center bottom no-repeat rgb(218, 220, 215);
     background-size: auto 120%;
     box-sizing: border-box;
     height: 700px;

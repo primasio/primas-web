@@ -156,6 +156,9 @@
     .team{
         height: 420px;
     }
+    .team .container {
+        padding-top: 32px;
+    }
     .team .title .zh {
         font-size: 24px;
     }
@@ -346,6 +349,12 @@
     .introduction .section.what .texts .demo{
         margin: 50px auto;
     }
+    .ios-download{
+        display: none;
+    }
+    .ios-download-phone{
+        display: block;
+    }
     .introduction .section.what .image img {
         width: 100%;
     }
@@ -372,26 +381,6 @@
         text-align: center;
     }
 
-    /*.team {*/
-    /*position: relative;*/
-    /*background: url(images/ourteam.png) center bottom no-repeat rgb(218, 220, 215);*/
-    /*background-size: 162%;*/
-    /*box-sizing: border-box;*/
-    /*height: 251px;*/
-    /*}*/
-    /*.team .container{*/
-    /*padding-top: 20px;*/
-    /*}*/
-    /*.team .title{*/
-    /*text-align: center;*/
-    /*}*/
-    /*.team .title .zh {*/
-    /*font-size: 20px;*/
-    /*}*/
-
-    /*.team .title .en {*/
-    /*font-size: 14px;*/
-    /*}*/
     .team .summary {
         font-size: 15px;
         margin-top: 38px;
@@ -616,17 +605,11 @@
 }
 @media only screen and (max-width: 767px) and (min-width: 520px) {
     .team {
-        position: relative;
-        background: url(images/ourteam.png) center bottom no-repeat rgb(218, 220, 215);
         background-size: 162%;
-        box-sizing: border-box;
         height: 360px;
     }
     .team .container{
         padding-top: 20px;
-    }
-    .team .title{
-        text-align: center;
     }
     .team .title .zh {
         font-size: 24px;
@@ -638,17 +621,11 @@
 }
 @media only screen and (max-width: 519px) {
     .team {
-        position: relative;
-        background: url(images/ourteam.png) center bottom no-repeat rgb(218, 220, 215);
         background-size: 162%;
-        box-sizing: border-box;
         height: 251px;
     }
     .team .container{
         padding-top: 20px;
-    }
-    .team .title{
-        text-align: center;
     }
     .team .title .zh {
         font-size: 20px;
@@ -672,17 +649,11 @@
         font-size: 26px;
     }
     .team {
-        position: relative;
-        background: url(images/ourteam.png) center bottom no-repeat rgb(218, 220, 215);
         background-size: 162%;
-        box-sizing: border-box;
         height: 200px;
     }
     .team .container{
         padding-top: 20px;
-    }
-    .team .title{
-        text-align: center;
     }
     .team .title .zh {
         font-size: 20px;
