@@ -3,12 +3,12 @@
 	<head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
         <meta name="keywords" content="Primas，区块链" />
         <meta name="description" content="下一代内容价值生态圈，用区块链打破流量经济的桎梏，让读者获得有价值的内容，让作者获得应有的收益" />
         <link rel="shortcuticon" href="https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/favicon.ico" />
-        <link rel="stylesheet" href="https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/main.css" />
-        <link rel="stylesheet" href="https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/responsive.css" />
+        <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="responsive.css" />
         <title>Primas | 下一代内容价值生态圈</title>
         <script>
             var _hmt = _hmt || [];
@@ -29,13 +29,13 @@
                 <div class="container">
                     <div class="logo"></div>
                     <div class="items">
-                        <a href="#face" class="item">首页</a>
-                        <a href="#introduction" class="item" id="nav-introduction">简介</a>
-                        <a href="#team" class="item" id="nav-team">团队</a>
-                        <a href="#investors" class="item" id="nav-investors">委员会</a>
-                        <a href="#roadmap" class="item" id="nav-roadmap">路线图</a>
-                        <a href="#partners" class="item" id="nav-partners">合作伙伴</a>
-                        <a href="javascript:void(0)" class="item" id="navbar-community">加入社区</a>
+                        <a data-href="#face" class="item-nav item">首页</a>
+                        <a data-href="#introduction" class="item-nav item" id="nav-introduction">简介</a>
+                        <a data-href="#team" class="item-nav item" id="nav-team">团队</a>
+                        <a data-href="#investors" class="item-nav item" id="nav-investors">委员会</a>
+                        <a data-href="#roadmap" class="item-nav item" id="nav-roadmap">路线图</a>
+                        <a data-href="#partners" class="item-nav item" id="nav-partners">合作伙伴</a>
+                        <a data-href="javascript:void(0)" class="item" id="navbar-community">加入社区</a>
                         <div id="navbar-qr-code" class="weixin-qr-code">
                             <div class="title">微信扫码加入社区</div>
                             <div class="image"><img src="https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/ewm.jpg" class="ewm-img" width="100%" alt=""></div>
@@ -70,7 +70,7 @@
                         <div class="content">
                             <p>Primas是一个开放的内容发布、推荐和交易生态圈。Primas致力于使用区块链和其他技术手段改变现有内容市场格局，解决优质内容难以识别、传播和变现的问题。通过去中心化内容溯源和筛选机制，使用户获取到优质的内容。全新的内容价值评价体系保证优质内容的生产者直接获得收益。通过区块链的不可篡改性为原创者提供版权保护。去中心化数据管理也将更好地保护用户的隐私。</p>
                         </div>
-                        <div class="demo">
+                        <div class="demo" id="ios-download">
                             <div class="">下载IOS版需要TestFlight</div>
                             <img width="100%" class="ios-download" src="https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/ios_download.png" alt="">
                             <img width="100%" class="ios-download-phone" src="https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/ios_download_phone.png" alt="">
@@ -316,8 +316,18 @@
         <div class="copyright">
             &copy; 2017 Primas. All rights reserved.
         </div>
+        <div class="popup">
+            <div class="pup-form">
+                <div class="close">X</div>
+                <div class="top-header">请填写信息</div>
+                <div class="form-group"><label class="input-label" for="email">联系邮箱:</label><input type="text" id="email" name="email" class="input-write"></div>
+                <div class="form-group"><label class="input-label" for="beizhu">备注:</label><input type="text" id="beizhu" name="beizhu" class="input-write"></div>
+                <div class="sub-btn disabled">提交</div>
+            </div>
+
+        </div>
         <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script type="text/javascript" src="https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/main.js"></script>
+        <script type="text/javascript" src="main.js"></script>
         <script type="text/javascript" src="https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/lib/processing.min.js"></script>
         <script type="text/javascript" src="https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/planet.js"></script>
 	</body>

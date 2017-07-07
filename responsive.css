@@ -602,6 +602,44 @@
     .main-section-title .en {
         font-size: 20px;
     }
+    .pup-form {
+        width: 300px;
+        padding: 0 10px 40px 10px;
+        border-radius: 5px;
+    }
+    label.input-label {
+        width: 70px;
+        padding-right: 5px;
+        font-size: 14px;
+    }
+
+    .input-write {
+        width: 185px;
+        line-height: 1.8;
+        padding: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .form-group {
+        padding: 5px 0;
+    }
+
+    .sub-btn {
+        width: 150px;
+        margin: 20px 0 0 70px;
+        font-size: 14px;
+    }
+    .top-header {
+        line-height: 2;
+        padding: 6px 0;
+        margin-bottom: 10px;
+    }
+    .close {
+        right: 4px;
+        top: 10px;
+        font-size: 20px;
+        width: 40px;
+    }
 }
 @media only screen and (max-width: 767px) and (min-width: 520px) {
     .team {

@@ -147,6 +147,7 @@ a img {
     height: 900px;
     background-color: #000000;
     overflow: hidden;
+    z-index: 1;
 }
 
 .face .background {
@@ -267,6 +268,7 @@ a img {
     line-height: 2;
     font-size: 14px;
     color: #ccc;
+    cursor: pointer;
 }
 .ios-download-phone{
     display: none;
@@ -619,4 +621,83 @@ a img {
 .main-section-title .zh {
     font-size: 36px;
     vertical-align: top;
+}
+
+/*弹出层*/
+.popup{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+    left: 0;
+    top: 0;
+    z-index: 2;
+    color: #666;
+}
+.pup-form {
+    width: 500px;
+    background: rgba(255,255,255,.9);
+    /* height: 252px; */
+    padding: 0 20px 40px 20px;
+    border-radius: 5px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%,-50%,0);
+}
+label.input-label {
+    width: 100px;
+    text-align: right;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.input-write {
+    width: 320px;
+    line-height: 2;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-group {
+    padding: 5px 0;
+}
+
+.sub-btn {
+    width: 240px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 2.5;
+    margin: 20px 0 0 100px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.sub-btn.disabled {
+    cursor: not-allowed;
+    background: #999;
+}
+.top-header {
+    line-height: 2;
+    padding: 10px 0;
+    font-weight: bold;
+    border-bottom: 1px solid #333;
+    margin-bottom: 25px;
+}
+.close {
+    position: absolute;
+    right: 4px;
+    top: 10px;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+.error-tips {
+    padding-left: 100px;
+    font-size: 12px;
+    color: red;
 }

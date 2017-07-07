@@ -68,7 +68,47 @@
             $this[0].src=src;
         }
     })
+    //
+    var scrollTop, rootElement = document.scrollingElement || docuemnt.body;
+    $('#ios-download').on('click',function () {
+        $('.popup').show();
+       scrollTop = rootElement.scrollTop;
+        $('body').css({position:'fixed',top:-scrollTop+'px'})
+    })
+    //表单提交
+    $('#email').on('keyup',function () {
+        var myreg = /^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/;
+        if(!myreg.test(this.value)){
+            $('.sub-btn').addClass('disabled');
+        }else{
+            $('.sub-btn').removeClass('disabled');
+        }
+    });
+    $('.pup-form')
+        .on('click','.close',function () {
+            $('.popup').hide();
+            $('body').css({position:'static'});
+            rootElement.scrollTop=scrollTop;
+        }).end()
+        .on('click','.sub-btn',function () {
+            if(!$(this).hasClass('disabled')){
+                $.ajax({
+                    method: "POST",
+                    crossDomain:true,
+                    contentType:"application/json",
+                    url: "http://139.196.73.49:3098/report",
+                    data: { email: "John@dsd.com", remark: "Boston" },
+                    success:function () {
+                        alert('ok')
+                    }
+                })
+            }
 
+        });
+    $('#navbar').on('click','.item-nav',function () {
+        var $el=document.querySelector($(this).data('href'));
+        scrollTo($el)
+    })
 
     function adjustPageSize()
     {
@@ -109,6 +149,19 @@
                 }
             }
         });
+    }
+    var timer;
+    function scrollTo(el){
+
+        timer = setInterval(function(){
+            var osTop = el.offsetTop;
+            var speed = Math.floor(-osTop / 6);
+            console.log(osTop)
+            rootElement.scrollTop = osTop + speed;
+            if(osTop == rootElement.scrollTop){
+                clearInterval(timer);
+            }
+        },30);
     }
 
     $(window).resize(function() {
