@@ -665,6 +665,7 @@ label.input-label {
     outline: none;
     background: url(https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/formicon.png) no-repeat;
     font-size: 14px;
+    transition: all .2s;
 }
 
 .form-group {
@@ -699,6 +700,11 @@ label.input-label {
     line-height: 40px;
     text-align: center;
     cursor: pointer;
+    opacity: .4;
+    transition: .4s all;
+}
+.close:hover{
+    opacity: 1;
 }
 .error-tips {
     padding-left: 100px;
@@ -725,8 +731,18 @@ label.input-label {
     background-position: left 11px;
     border-bottom: 1px solid #ccc;
 }
+.input-write.input-write-email:focus{
+    border-bottom-color:#ed5f4b ;
+    background-image:url(images/formicon_foucs.png);
+}
 .input-write.input-write-email::placeholder {
     color: #ccc;
+}
+.textarea-write:focus{
+    border-color:#ed5f4b ;
+ }
+.textarea-write:focus + .input-write-beizhu{
+    background-image:url(images/formicon_foucs.png);
 }
 .textarea-write::placeholder {
     color: #ccc;
@@ -737,7 +753,7 @@ label.input-label {
     height: 38px;
 }
 
-textarea#beizhu {
+.textarea-write {
     border-radius:0;
     border: 1px solid #ccc;
     width: 100%;
@@ -746,6 +762,8 @@ textarea#beizhu {
     padding: 5px;
     outline: none;
     font-size: 14px;
+    resize: none;
+    transition: all .2s;
 }
 .bot-tip {
     font-size: 12px;

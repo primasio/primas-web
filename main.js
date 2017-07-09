@@ -76,7 +76,6 @@
         $('.popup').show();
         scrollTop = rootElement.scrollTop
         $('body').css({position:'fixed',top:-scrollTop+'px'})
-        console.log(scrollTop)
     })
     //表单提交
     $('#email').on('keyup',function () {
