@@ -14,6 +14,7 @@
     var minHeight = 300;
     var radio=1920/817;
     var updateHeight = window.innerHeight >= minHeight ? window.innerHeight : minHeight;
+    var ispopup=false;//是否是弹层引起的滚动
 
 
     $face = $('#face');
@@ -53,7 +54,7 @@
         e.stopPropagation();
     });
 
-    var canvas = document.getElementById("intro-bg");
+
 
     $("[data-track]").on("click", function () {
         var label = $(this).data("track");
@@ -71,6 +72,7 @@
     //
     var scrollTop, rootElement = document.scrollingElement || docuemnt.body;
     $('#ios-download').on('click',function () {
+        ispopup=true;
         $('.popup').show();
        scrollTop = rootElement.scrollTop;
         $('body').css({position:'fixed',top:-scrollTop+'px'})
@@ -86,6 +88,7 @@
     });
     $('.pup-form')
         .on('click','.close',function () {
+            ispopup=false;
             $('.popup').hide();
             $('body').css({position:'static'});
             rootElement.scrollTop=scrollTop;
@@ -107,7 +110,7 @@
         });
     $('#navbar').on('click','.item-nav',function () {
         var $el=document.querySelector($(this).data('href'));
-        scrollTo($el)
+        $("html,body").stop().animate({scrollTop:$el.offsetTop-navbarHeight},600)
     })
 
     function adjustPageSize()
@@ -150,19 +153,6 @@
             }
         });
     }
-    var timer;
-    function scrollTo(el){
-
-        timer = setInterval(function(){
-            var osTop = el.offsetTop;
-            var speed = Math.floor(-osTop / 6);
-            console.log(osTop)
-            rootElement.scrollTop = osTop + speed;
-            if(osTop == rootElement.scrollTop){
-                clearInterval(timer);
-            }
-        },30);
-    }
 
     $(window).resize(function() {
         adjustPageSize();
@@ -171,10 +161,12 @@
     });
 
     $(document).scroll(function(){
+        if(!!ispopup) return ;
         adjustNavbar();
     });
 
     $(function () {
+        var canvas = document.getElementById("intro-bg");
         processingInstance = new Processing(canvas, startSolarSystem);
         processingInstance.resizeSketch(updateHeight);
 

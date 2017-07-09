@@ -14,7 +14,9 @@ body {
 * {
     box-sizing: border-box;
 }
-
+input{
+    -webkit-appearance: none;
+}
 a img {
     border: 0;
     outline: none;
@@ -79,6 +81,7 @@ a img {
     color: #ffffff;
     text-decoration: none;
     padding: 0 16px;
+    cursor: pointer;
 }
 
 .navbar.fixed .items .item {
