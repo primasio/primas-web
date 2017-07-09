@@ -612,12 +612,13 @@
     .input-write {
         width: 100%;
         line-height: 2;
-        padding: 5px 10px 5px 30px;
+        padding: 5px 10px 5px 24px;
         font-size: 14px;
+        background-size: 16px auto;
     }
 
     .form-group {
-        padding: 8px 0;
+        padding: 5px 0;
     }
 
     .sub-btn {
@@ -636,14 +637,14 @@
     }
 
     .input-write.input-write-email {
-        background-position: left 11px;
+        background-position: left 13px;
     }
     .input-write.input-write-email::placeholder {
         color: #ccc;
     }
 
     .input-write.input-write-beizhu {
-        background-position: left -55px;
+        background-position: left -35px;
         color: #ccc;
     }
 
@@ -662,6 +663,7 @@
     span.require {
         left: -10px;
         top: 18px;
+        font-size: 12px;
     }
 }
 @media only screen and (max-width: 767px) and (min-width: 520px) {

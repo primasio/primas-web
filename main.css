@@ -668,7 +668,7 @@ label.input-label {
 }
 
 .form-group {
-    padding: 10px 0;
+    padding: 8px 0;
     position: relative;
 }
 
@@ -728,10 +728,13 @@ label.input-label {
 .input-write.input-write-email::placeholder {
     color: #ccc;
 }
-
+.textarea-write::placeholder {
+    color: #ccc;
+}
 .input-write.input-write-beizhu {
     background-position: left -55px;
     color: #ccc;
+    height: 38px;
 }
 
 textarea#beizhu {
