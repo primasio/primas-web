@@ -150,7 +150,7 @@ a img {
     height: 900px;
     background-color: #000000;
     overflow: hidden;
-    z-index: 1;
+    z-index: 3;
 }
 
 .face .background {
@@ -635,14 +635,14 @@ a img {
     background: rgba(0,0,0,.7);
     left: 0;
     top: 0;
-    z-index: 2;
+    z-index: 3;
     color: #666;
 }
 .pup-form {
-    width: 500px;
-    background: rgba(255,255,255,.9);
+    width: 398px;
+    background: rgb(255,255,255);
     /* height: 252px; */
-    padding: 0 20px 40px 20px;
+    padding: 20px 43px;
     border-radius: 5px;
     left: 50%;
     position: absolute;
@@ -657,50 +657,101 @@ label.input-label {
 }
 
 .input-write {
-    width: 320px;
+    width: 100%;
     line-height: 2;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 5px 10px 5px 30px;
+    border: none;
+    border-radius:0;
     outline: none;
+    background: url(https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/formicon.png) no-repeat;
+    font-size: 14px;
 }
 
 .form-group {
-    padding: 5px 0;
+    padding: 10px 0;
+    position: relative;
 }
 
 .sub-btn {
-    width: 240px;
-    background: #333;
+    width: 100%;
+    background: #ec6251;
     color: #fff;
     text-align: center;
-    line-height: 2.5;
-    margin: 20px 0 0 100px;
-    border-radius: 5px;
+    line-height: 52px;
+    margin: 30px auto 0;
+    border-radius: 2px;
     cursor: pointer;
+    font-size: 18px;
 }
 .sub-btn.disabled {
     cursor: not-allowed;
     background: #999;
 }
 .top-header {
-    line-height: 2;
-    padding: 10px 0;
-    font-weight: bold;
-    border-bottom: 1px solid #333;
-    margin-bottom: 25px;
+    text-align: center;
 }
 .close {
     position: absolute;
-    right: 4px;
-    top: 10px;
-    font-size: 20px;
-    width: 40px;
+    right: 0;
+    top: 0;
+    font-size: 28px;
+    width: 60px;
+    line-height: 40px;
     text-align: center;
     cursor: pointer;
 }
 .error-tips {
     padding-left: 100px;
     font-size: 12px;
+    color: red;
+}
+.toast-wrap {
+    width:20%;
+    min-width:150px;
+    background:rgba(255,255,255,.8);
+    height:60px;
+    color:#333;
+    line-height:60px;
+    text-align:center;
+    border-radius:5px;
+    position:fixed;
+    top:10%;
+    left:50%;
+    -webkit-transform: translate3d(-50%,0,0);
+    z-index:999999;
+    font-size: 14px;
+}
+.input-write.input-write-email {
+    background-position: left 11px;
+    border-bottom: 1px solid #ccc;
+}
+.input-write.input-write-email::placeholder {
+    color: #ccc;
+}
+
+.input-write.input-write-beizhu {
+    background-position: left -55px;
+    color: #ccc;
+}
+
+textarea#beizhu {
+    border-radius:0;
+    border: 1px solid #ccc;
+    width: 100%;
+    -webkit-appearance: none;
+    height: 120px;
+    padding: 5px;
+    outline: none;
+    font-size: 14px;
+}
+.bot-tip {
+    font-size: 12px;
+    color: #999;
+    margin-top: 34px;
+}
+span.require {
+    position: absolute;
+    left: -20px;
+    top: 20px;
     color: red;
 }

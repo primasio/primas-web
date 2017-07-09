@@ -74,8 +74,9 @@
     $('#ios-download').on('click',function () {
         ispopup=true;
         $('.popup').show();
-       scrollTop = rootElement.scrollTop;
+        scrollTop = rootElement.scrollTop
         $('body').css({position:'fixed',top:-scrollTop+'px'})
+        console.log(scrollTop)
     })
     //表单提交
     $('#email').on('keyup',function () {
@@ -87,22 +88,21 @@
         }
     });
     $('.pup-form')
-        .on('click','.close',function () {
-            ispopup=false;
-            $('.popup').hide();
-            $('body').css({position:'static'});
-            rootElement.scrollTop=scrollTop;
-        }).end()
+        .on('click','.close',closePop).end()
         .on('click','.sub-btn',function () {
-            if(!$(this).hasClass('disabled')){
+            var $subbtn=$(this);
+            if(!$subbtn.hasClass('disabled')){
                 $.ajax({
                     method: "POST",
-                    crossDomain:true,
-                    contentType:"application/json",
-                    url: "http://139.196.73.49:3098/report",
-                    data: { email: "John@dsd.com", remark: "Boston" },
+                    url: 'https://api.yuanben.io/primas/report',
+                    data: { email: $('#email').val(), remark: $('#beizhu').val() },
+                    beforeSend:function () {
+                        $subbtn.addClass('disabled').text('提交中')
+                    },
                     success:function () {
-                        alert('ok')
+                        closePop()
+                        layer('提交成功！');
+                        $subbtn.text('提交');
                     }
                 })
             }
@@ -112,7 +112,12 @@
         var $el=document.querySelector($(this).data('href'));
         $("html,body").stop().animate({scrollTop:$el.offsetTop-navbarHeight},600)
     })
-
+    function closePop() {
+        ispopup=false;
+        $('.popup').hide();
+        $('body').css({position:'static'});
+        rootElement.scrollTop=scrollTop;
+    }
     function adjustPageSize()
     {
 
@@ -152,6 +157,16 @@
                 }
             }
         });
+    }
+
+    function layer(text) {
+        var $div=document.createElement("div");
+        $div.className='toast-wrap'
+        $div.innerHTML=text;
+        document.body.appendChild($div);
+        setTimeout(function () {
+            document.body.removeChild($div);
+        },3000)
     }
 
     $(window).resize(function() {
