@@ -644,11 +644,13 @@
     }
 
     .input-write.input-write-beizhu {
-        background-position: left -35px;
+        background-position: left -40px;
         color: #ccc;
     }
-
-    textarea#beizhu {
+    .textarea-write:focus{
+        border-color:#ed5f4b ;
+    }
+    .textarea-write {
         border: 1px solid #ccc;
         width: 100%;
         height: 100px;

@@ -626,7 +626,7 @@ a img {
     vertical-align: top;
 }
 
-/*弹出层*/
+/*å¼¹å‡ºå±‚*/
 .popup{
     display: none;
     position: fixed;
@@ -665,7 +665,10 @@ label.input-label {
     outline: none;
     background: url(https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/formicon.png) no-repeat;
     font-size: 14px;
-    transition: all .2s;
+    -webkit-transition: .5s all ease-in-out;
+    -moz-transition: .5s all ease-in-out;
+    -ms-transition: .5s all ease-in-out;
+    transition: .5s all ease-in-out;
 }
 
 .form-group {
@@ -701,7 +704,11 @@ label.input-label {
     text-align: center;
     cursor: pointer;
     opacity: .4;
-    transition: .4s all;
+    -webkit-transition: .5s all ease-in-out;
+    -moz-transition: .5s all ease-in-out;
+    -ms-transition: .5s all ease-in-out;
+    transition: .5s all ease-in-out;
+
 }
 .close:hover{
     opacity: 1;
@@ -724,6 +731,9 @@ label.input-label {
     top:10%;
     left:50%;
     -webkit-transform: translate3d(-50%,0,0);
+    -ms-transform: translate3d(-50%,0,0);
+    -moz-transform: translate3d(-50%,0,0);
+    transform: translate3d(-50%,0,0);
     z-index:999999;
     font-size: 14px;
 }
@@ -733,16 +743,16 @@ label.input-label {
 }
 .input-write.input-write-email:focus{
     border-bottom-color:#ed5f4b ;
-    background-image:url(images/formicon_foucs.png);
+    background-image:url(https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/formicon_foucs.png);
 }
 .input-write.input-write-email::placeholder {
     color: #ccc;
 }
 .textarea-write:focus{
     border-color:#ed5f4b ;
- }
+}
 .textarea-write:focus + .input-write-beizhu{
-    background-image:url(images/formicon_foucs.png);
+    background-image:url(https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/formicon_foucs.png);
 }
 .textarea-write::placeholder {
     color: #ccc;
@@ -751,6 +761,9 @@ label.input-label {
     background-position: left -55px;
     color: #ccc;
     height: 38px;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .textarea-write {
@@ -763,7 +776,13 @@ label.input-label {
     outline: none;
     font-size: 14px;
     resize: none;
-    transition: all .2s;
+    position: relative;
+    top: 30px;
+    margin-bottom: 38px;
+    -webkit-transition: .5s all ease-in-out;
+    -moz-transition: .5s all ease-in-out;
+    -ms-transition: .5s all ease-in-out;
+    transition: .5s all ease-in-out;
 }
 .bot-tip {
     font-size: 12px;
