@@ -270,8 +270,9 @@ a img {
     margin-top: 120px;
     line-height: 2;
     font-size: 14px;
-    color: #ccc;
+    color: #aaa;
     cursor: pointer;
+    text-align: center;
 }
 .ios-download-phone{
     display: none;
