@@ -26,7 +26,10 @@ a img {
 .f16{font-size:16px}
 .f18{font-size:18px}
 .fb{font-weight: bold}
-
+.fl{float: left}
+.fr{float: right}
+.clearfix{overflow: auto}
+.t-center{text-align: center;}
 .container {
     position: relative;
     width: 1170px;
@@ -202,10 +205,10 @@ a img {
 }
 
 .face .content .white-paper {
-    margin-top: 240px;
+    margin-top: 200px;
 }
 
-.face .content .white-paper a {
+.face .content .white-paper .white-paper-link {
     display: inline-block;
     width: 236px;
     height: 60px;
@@ -223,13 +226,24 @@ a img {
     background: -ms-linear-gradient(left, #df8636, #ed5f4b);
     background: -o-linear-gradient(left, #df8636, #ed5f4b);
 }
+.face .icoage-link{
+    font-size: 16px;
+    color: #f68151;
+    display: block;
+    text-align: center;
+    margin:0 auto 60px;
+    text-decoration: none;
+}
+.face .icoage-link:hover{
+    text-decoration: underline;
+}
 .primas-white-paper-tip {
     display: block;
     line-height: 3;
     font-size: 14px;
     opacity: 0.7;
 }
-.face .content .white-paper a:hover {
+.face .content .white-paper .white-paper-link:hover {
     background-color: #fd6f5b;
     background: -webkit-gradient(linear, left top, right top, from(#ef9646), to(#fd6f5b));
     background: -webkit-linear-gradient(left, #ef9646, #fd6f5b);
@@ -238,7 +252,7 @@ a img {
     background: -o-linear-gradient(left, #ef9646, #fd6f5b);
 }
 
-.face .content .white-paper a:active {
+.face .content .white-paper .white-paper-link:active {
     background-color: #dd4f3b;
 
     background: -webkit-gradient(linear, left top, right top, from(#cf7626), to(#dd4f3b));
@@ -250,32 +264,24 @@ a img {
 
 .introduction {
     position: relative;
-    background-color: #232328;
     font-size: 16px;
-    color: #ffffff;
 }
 .introduction .section {
     position: relative;
     overflow: auto;
 }
+.container-what{
+    background-color: #232328;
+    color: #ffffff;
+}
+
 .introduction .section.what {
     overflow: auto;
+    padding-bottom: 60px;
 }
 .introduction .section.what .texts .content {
     margin-top: 50px;
     line-height: 2;
-}
-.introduction .section.what .texts .demo {
-    width: 202px;
-    margin-top: 120px;
-    line-height: 2;
-    font-size: 14px;
-    color: #aaa;
-    cursor: pointer;
-    text-align: center;
-}
-.ios-download-phone{
-    display: none;
 }
 .introduction .section.what .texts {
     width: 40%;
@@ -293,22 +299,132 @@ a img {
 }
 
 .introduction .section.strength {
-    margin-top: 120px;
-    padding-top: 120px;
-    padding-bottom: 120px;
-    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    color: #333;
 }
-
-.introduction .section.strength .item {
-    width: 20%;
+.container-strength .container{
+    width: 1000px;
+}
+.strength-content-item{
+    margin-bottom: 150px;
+}
+.introduction .main-section-title{
+    margin: 40px auto 90px ;
+}
+.strength-content-item-img{
+    max-width: 35%;
+}
+.strength-content-item-summary{
+    width: 65%;
+    line-height: 1.5;
+    padding-top: 60px;
+}
+.desc-padding-left{
+    padding-left:5% ;
+}
+.desc-padding-right{
+    padding-right:5%
+}
+.strength-content-item-heading{
+    font-size: 28px;
+    padding:0 0 15px;
+}
+.strength-content-item-desc{
+    font-size: 16px;
+}
+.container-production{
+    padding: 160px 0 60px ;
+    color: #fff;
+    background: url(images/production-bg.png) left center no-repeat #474751;
+    background-size: 70% auto;
+}
+.production-mobile{display: none}
+.production-left{
     float: left;
-    text-align: center;
-    margin-top: 124px;
+    width: 50%;
+    text-align: right;
+    padding-right: 60px;
+}
+.production-left-img{
+    width: 100%;
+    max-width: 540px;
+}
+.production-right{
+    float: left;
+    width: 50%;
+    padding-left: 100px;
+}
+.production-title{
+    position: relative;
+    font-size: 40px;
     color: #ed5f4b;
+    margin-bottom: 80px;
+    padding-bottom: 20px;
+}
+.production-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 4px;
+    background: #ed5f4b;
+}
+.production-cilent-item{
+    margin-right: 20px;
+    float: left;
+}
+.production-cilent-sup {
+    margin-bottom: 20px;
+}
+.production-cilent-icon{
+
+}
+.production-cilent-icon-sub{
+
+}
+.production-cilent .demo {
+    width: 202px;
+    margin-top: 90px;
+    line-height: 2;
+    font-size: 14px;
+    cursor: pointer;
+}
+.ios-download-phone{
+    display: none;
 }
 
-.introduction .section.strength .item .description {
-    margin-top: 35px;
+.container-advantage{
+    background:#eee;
+    padding-bottom:140px;
+}
+.advantage-item{
+    width: 25%;
+    border-left:1px solid #ccc;
+    padding: 0 25px;
+    float: left;
+    height: 240px;
+}
+.advantage-item:nth-child(1){
+    border: none;
+}
+.advantage-item-title{
+    position: relative;
+    font-size: 28px;
+    padding-bottom: 50px;
+}
+
+.advantage-item-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background: #ed5f4b;
+}
+.advantage-item-desc{
+    line-height: 1.5;
+    margin-top: 30px;
 }
 
 .team {
@@ -396,6 +512,7 @@ a img {
 .investors .investor .intro {
     font-size: 16px;
     margin-top: 20px;
+    line-height: 1.5;
 }
 
 .roadmap {
@@ -470,6 +587,7 @@ a img {
 
 .roadmap .content .milestone .text {
     color: #ffffff;
+    height: 103px;
 }
 
 .roadmap .content .milestone .text .date {
@@ -478,7 +596,7 @@ a img {
 }
 
 .roadmap .content .milestone .text .name {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 5px;
 }
 
@@ -511,7 +629,20 @@ a img {
     float: left;
     margin-top: 70px;
 }
-
+.media{
+    padding: 90px 0 140px;
+}
+.media-content{
+    padding-top: 90px; padding-top: 90px;
+}
+.media-item{
+    width: 25%;
+    float: left;
+    margin-bottom:20px;
+}
+.media-item-img{
+    width: 100%;
+}
 .contact {
     position: relative;
     background-color: #ed5f4b;

@@ -109,6 +109,7 @@
         });
     $('#navbar').on('click','.item-nav',function () {
         var $el=document.querySelector($(this).data('href'));
+        // console.log($el.offsetTop,navbarHeight)
         $("html,body").stop().animate({scrollTop:$el.offsetTop-navbarHeight},600)
     })
     function closePop() {
@@ -141,10 +142,10 @@
         }
 
         $sections.each(function() {
-            var top = $(this).offset().top - navbarHeight,
-                bottom = top + $(this).height();
-
-            if (currentTop >= top && currentTop <= bottom) {
+            var top =parseInt($(this).offset().top - navbarHeight),
+                bottom = top + $(this).outerHeight();
+            if($(this).hasClass('media')){console.log(top,bottom,currentTop)}
+            if (currentTop >= top && currentTop < bottom) {
 
                 if(!$(this).hasClass('active'))
                 {

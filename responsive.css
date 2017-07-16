@@ -36,19 +36,42 @@
         font-size: 38px;
     }
 
-    .introduction .section.strength {
-        margin-top: 90px;
-        padding-top: 90px;
-        padding-bottom: 90px;
+    .container-strength .container{
+        width: 960px;
+    }
+    .strength-content-item {
+        margin-bottom: 100px;
+    }
+    .strength-content-item-heading {
+        font-size: 24px;
+    }
+    .container-production {
+        padding: 120px 0 50px;
+    }
+    .production-left {
+        padding-right: 40px;
+    }
+    .production-right {
+        padding-left: 60px;
+    }
+    .production-title {
+        font-size: 38px;
+        margin-bottom: 60px;
     }
 
-    .introduction .section.strength .item {
-        margin-top: 90px;
+    .container-advantage{
+        background:#eee;
+        padding-bottom:140px;
+    }
+    .advantage-item{
+        padding: 0 20px;
+        height: 224px;
+    }
+    .advantage-item-title{
+        font-size: 24px;
+        padding-bottom: 40px;
     }
 
-    .introduction .section.strength .item img {
-        width: 100px;
-    }
     .team{
         height: 510px;
     }
@@ -140,6 +163,7 @@
 
     .navbar.fixed .items .item {
         padding: 0 8px;
+        font-size: 16px;
     }
 
     .face .content {
@@ -151,8 +175,66 @@
     }
 
     .face .content .white-paper {
-        margin-top: 160px;
+        margin-top: 120px;
     }
+    .introduction .section.what .texts {
+        padding-top: 50px;
+    }
+    .introduction .section.what .texts .demo{
+        margin-top: 40px;
+    }
+    .introduction .section.what .image img {
+        width: 100%;
+    }
+
+    .introduction .section .title {
+        font-size: 28px;
+    }
+    .introduction .main-section-title {
+        margin: 40px auto;
+    }
+    .container-strength .container{
+        width: 750px;
+    }
+    .strength-content-item {
+        margin-bottom: 50px;
+    }
+    .strength-content-item-heading {
+        font-size: 24px;
+    }
+
+    .container-production {
+        padding: 80px 0 50px;
+    }
+    .production-left {
+        padding-right: 40px;
+    }
+    .production-right {
+        padding-left: 60px;
+    }
+    .production-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    .production-cilent .demo {
+        margin-top: 48px;
+    }
+
+    .container-advantage{
+        padding-bottom:90px;
+    }
+    .advantage-item{
+        padding: 0 10px;
+        height: 224px;
+    }
+    .advantage-item-title{
+        font-size: 20px;
+        padding-bottom: 30px;
+    }
+    .advantage-item-desc {
+        margin-top: 20px;
+    }
+
     .team{
         height: 420px;
     }
@@ -182,37 +264,6 @@
     }
     .team .summary span {
         font-size: 25px;
-    }
-    .introduction .section.what .texts {
-        padding-top: 50px;
-    }
-    .introduction .section.what .texts .demo{
-        margin-top: 40px;
-    }
-    .introduction .section.what .image img {
-        width: 100%;
-    }
-
-    .introduction .section .title {
-        font-size: 28px;
-    }
-
-    .introduction .section.strength {
-        margin-top: 60px;
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-
-    .introduction .section.strength .item {
-        margin-top: 60px;
-    }
-
-    .introduction .section.strength .item img {
-        width: 100px;
-    }
-
-    .introduction .section.strength .item .description {
-        margin-top: 15px;
     }
 
     .investors {
@@ -267,6 +318,10 @@
         width: 33.3%;
     }
 
+    .media-item{
+        width: 33.333%;
+    }
+
     .contact > .container > .title .zh {
         font-size: 28px;
     }
@@ -315,7 +370,6 @@
     .navbar-placeholder {
         display: none;
     }
-
     .face .content .mobile-logo {
         display: block;
         font-size: 26px;
@@ -334,7 +388,7 @@
     }
 
     .face .content .white-paper {
-        margin-top: 180px;
+        margin-top: 120px;
     }
 
     .introduction .section.what .texts,
@@ -358,27 +412,97 @@
     .introduction .section.what .image img {
         width: 100%;
     }
-
-    .introduction .section.strength {
-        margin-top: 60px;
-        padding-top: 60px;
-        padding-bottom: 60px;
+    .introduction .main-section-title {
+        margin: 40px auto;
     }
-
-    .introduction .section.strength .item {
-        width: 50%;
-        margin-top: 48px;
+    .container-strength .container{
+        width: auto;
     }
-
-    .introduction .section.strength .item .description {
-        margin-top: 0px;
+    .strength-content-item-img{
+        float: none;
+        display: block;
+        max-width: 50%;
+        margin: 0 auto;
     }
-    .introduction .section.strength .item img{
-        width: 70px;
+    .strength-content-item-heading {
+        font-size: 18px;
+        text-align: center;
+    }
+    .strength-content-item-desc {
+        font-size: 14px;
+    }
+    .strength-content-item-summary {
+        padding: 20px 0;
+        float: none;
+        width: 100%;
+        max-width: 100%;
+    }
+    .strength-content-item {
+        margin-bottom: 50px;
     }
     .introduction .section .title {
         font-size: 28px;
         text-align: center;
+    }
+
+    .container-production {
+        padding: 40px 0 60px;
+        text-align: center;
+        background-position: center top;
+    }
+
+    .production-right {
+        float: none;
+        width: auto;
+        padding-left: 0;
+    }
+    .production-left {
+        float: none;
+        width: 90%;
+        text-align: center;
+        margin: auto;
+        padding: 0;
+    }
+    .production-mobile{display: block}
+    .production-right .production-title{
+        display: none;
+    }
+    .production-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .production-title:after{display: none}
+    .production-cilent-item{
+        display: inline-block;
+        float: none;
+        margin: 0 10px;
+    }
+    .production-cilent .demo {
+        width: 202px;
+        margin: 50px auto 0;
+        line-height: 2;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .container-advantage{
+        padding-bottom:90px;
+    }
+    .advantage-item{
+        float: none;
+        width: 100%;
+        padding: 30px 0;
+        border: none;
+        border-top: 1px solid #ccc;
+        height: auto;
+    }
+    .advantage-item-title{
+        font-size: 18px;
+        padding-bottom: 30px;
+    }
+    .advantage-item-desc {
+        margin-top: 20px;
+        font-size: 14px;
     }
 
     .team .summary {
@@ -496,6 +620,7 @@
         position: relative;
         right: 4px;
     }
+
     .roadmap .content .milestone.left .text {
         float: left;
         margin-left: 35px;
@@ -512,7 +637,7 @@
     }
 
     .roadmap .content .milestone .text .name {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .roadmap .line .left {
@@ -539,7 +664,15 @@
     .partners .content .partner img {
         width: 90%;
     }
-
+    .media {
+        padding: 50px 0;
+    }
+    .media-content{
+        padding-top: 50px;
+    }
+    .media-item{
+        width: 50%;
+    }
     .contact {
         padding: 48px 0;
     }
@@ -701,7 +834,13 @@
     }
 }
 @media only screen and (max-width: 374px) {
-    .face .content .white-paper a {
+    .face .content .white-paper {
+        margin-top: 100px;
+    }
+    .face .content .mobile-logo {
+        top: -40px;
+    }
+    .face .content .white-paper .white-paper-link {
         width: 200px;
         height: 50px;
         line-height: 50px;
@@ -746,5 +885,9 @@
         position: relative;
         z-index: 2;
         padding-left: 20px;
+    }
+    .roadmap .content .milestone.left .text {
+        float: left;
+        margin-left: 20px;
     }
 }
