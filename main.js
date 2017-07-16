@@ -144,7 +144,6 @@
         $sections.each(function() {
             var top =parseInt($(this).offset().top - navbarHeight),
                 bottom = top + $(this).outerHeight();
-            if($(this).hasClass('media')){console.log(top,bottom,currentTop)}
             if (currentTop >= top && currentTop < bottom) {
 
                 if(!$(this).hasClass('active'))

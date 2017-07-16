@@ -65,7 +65,7 @@
     }
     .advantage-item{
         padding: 0 20px;
-        height: 224px;
+        height: 250px
     }
     .advantage-item-title{
         font-size: 24px;
@@ -225,7 +225,7 @@
     }
     .advantage-item{
         padding: 0 10px;
-        height: 224px;
+        height: 250px;
     }
     .advantage-item-title{
         font-size: 20px;
@@ -427,6 +427,7 @@
     .strength-content-item-heading {
         font-size: 18px;
         text-align: center;
+        font-weight: bold;
     }
     .strength-content-item-desc {
         font-size: 14px;
@@ -499,6 +500,7 @@
     .advantage-item-title{
         font-size: 18px;
         padding-bottom: 30px;
+        font-weight: bold;
     }
     .advantage-item-desc {
         margin-top: 20px;
