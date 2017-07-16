@@ -82,8 +82,10 @@
         var myreg = /^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/;
         if(!myreg.test(this.value)){
             $('.sub-btn').addClass('disabled');
+            $('.errortip').show('disabled');
         }else{
             $('.sub-btn').removeClass('disabled');
+            $('.errortip').hide('disabled');
         }
     });
     $('.pup-form')

@@ -35,7 +35,11 @@ a img {
     width: 1170px;
     margin: 0 auto;
 }
-
+.errortip {
+    font-size: 12px;
+    color: red;
+    display: none;
+}
 .navbar,
 .navbar-placeholder {
     position: relative;
