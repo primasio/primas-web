@@ -334,7 +334,7 @@ a img {
 .container-production{
     padding: 160px 0 60px ;
     color: #fff;
-    background: url(images/production-bg.png) left center no-repeat #474751;
+    background: url(https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/production-bg.png) left center no-repeat #474751;
     background-size: 70% auto;
 }
 .production-mobile{display: none}
