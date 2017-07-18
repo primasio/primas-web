@@ -65,11 +65,12 @@
     }
     .advantage-item{
         padding: 0 20px;
-        height: 250px
+        height: 300px;
     }
     .advantage-item-title{
         font-size: 24px;
         padding-bottom: 40px;
+        height: 80px;
     }
 
     .team{
@@ -225,11 +226,12 @@
     }
     .advantage-item{
         padding: 0 10px;
-        height: 250px;
+        height: 300px;
     }
     .advantage-item-title{
         font-size: 20px;
         padding-bottom: 30px;
+        height: 70px;
     }
     .advantage-item-desc {
         margin-top: 20px;
@@ -501,6 +503,7 @@
         font-size: 18px;
         padding-bottom: 30px;
         font-weight: bold;
+        height: auto;
     }
     .advantage-item-desc {
         margin-top: 20px;
