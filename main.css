@@ -644,10 +644,14 @@ a img {
 
 .partners .content .partner {
     position: relative;
-    width: 25%;
+    width: 20%;
     text-align: center;
     float: left;
     margin-top: 70px;
+}
+.partners .content .partner img{
+    max-width: 100%;
+    display: block;
 }
 .media{
     padding: 90px 0 140px;
