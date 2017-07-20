@@ -110,13 +110,28 @@ a img {
 .weixin-qr-code {
     display: none;
     width: 200px;
-    height: 240px;
-    padding: 16px;
+    height: 220px;
+    padding: 10px 10px 0 10px;
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.15);
 }
-
+.weixin-qr-code.fixed {
+    display: block;
+    font-size: 12px;
+    position: fixed;
+    right: 10px;
+    top: 400px;
+    color: #ccc;
+    z-index: 4;
+    padding: 10px 0px 0;
+    width: 130px;
+    height: 160px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.15);
+}
+.weixin-qr-code.fixed .title {
+    color: #666;
+}
 .weixin-qr-code.active {
     display: block;
 }

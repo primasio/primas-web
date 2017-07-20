@@ -367,7 +367,9 @@
         width: auto;
         margin: 0 16px;
     }
-
+    .weixin-qr-code.fixed {
+        display: none;
+    }
     .navbar,
     .navbar-placeholder {
         display: none;
