@@ -655,6 +655,24 @@
         bottom: 0;
     }
 
+    .content.ico-content {
+        width: 100%;
+        /*margin: 8% auto!important;*/
+        color: #fff;
+        line-height: 1.6;
+        font-size: 14px;
+    }
+    .content.ico-content table{
+        border-top: 1px solid #555;
+        border-left: 1px solid #555;
+        margin: 30px auto;
+        border-collapse: collapse;
+    }
+    .content.ico-content table td{
+        border-bottom: 1px solid #555;
+        border-right: 1px solid #555;
+        padding: 2px 35px;
+    }
     .partners {
         padding: 48px 0;
     }

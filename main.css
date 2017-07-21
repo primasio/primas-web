@@ -630,6 +630,23 @@ a img {
 .roadmap .content .milestone .icon .mobile-img {
     display: none;
 }
+.content.ico-content {
+    width: 70%;
+    margin: 8% auto!important;
+    color: #fff;
+    line-height: 2;
+}
+.content.ico-content table{
+    border-top: 1px solid #555;
+    border-left: 1px solid #555;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+.content.ico-content table td{
+    border-bottom: 1px solid #555;
+    border-right: 1px solid #555;
+    padding: 2px 35px;
+}
 
 .partners {
     position: relative;
