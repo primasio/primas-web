@@ -654,7 +654,9 @@
     .roadmap .line .right {
         bottom: 0;
     }
-
+    .icoplan {
+        padding: 60px 0 ;
+    }
     .content.ico-content {
         width: 100%;
         /*margin: 8% auto!important;*/
@@ -671,7 +673,7 @@
     .content.ico-content table td{
         border-bottom: 1px solid #555;
         border-right: 1px solid #555;
-        padding: 2px 35px;
+        white-space: normal;
     }
     .partners {
         padding: 48px 0;

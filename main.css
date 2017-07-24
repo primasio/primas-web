@@ -630,9 +630,16 @@ a img {
 .roadmap .content .milestone .icon .mobile-img {
     display: none;
 }
+.icoplan {
+    padding: 100px 0 ;
+    background-color: #232328;
+}
+.icoplan .main-section-title{
+    color: #fff;
+}
 .content.ico-content {
     width: 70%;
-    margin: 8% auto!important;
+    margin: 10% auto!important;
     color: #fff;
     line-height: 2;
 }
@@ -641,11 +648,14 @@ a img {
     border-left: 1px solid #555;
     margin: 30px auto;
     border-collapse: collapse;
+    width: 80%;
 }
 .content.ico-content table td{
     border-bottom: 1px solid #555;
     border-right: 1px solid #555;
-    padding: 2px 35px;
+    padding: 2px 10px;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .partners {
