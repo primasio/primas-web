@@ -188,16 +188,18 @@ a img {
 
 .face .content {
     position: absolute;
-    width: 760px;
+    width: 1000px;
     height: 500px;
     left: 50%;
-    margin-left: -380px;
+    transform:translate3d(-50%,0,0);
+    -webkit-transform:translate3d(-50%,0,0);
+    -moz-transform:translate3d(-50%,0,0);
+    -ms-transform:translate3d(-50%,0,0);
     top: 100px;
     z-index: 2;
     text-align: center;
     color: #ffffff;
     opacity: 0;
-
     -webkit-transition: opacity 0.5s ease-in-out;
     -moz-transition: opacity 0.5s ease-in-out;
     transition: opacity 0.5s ease-in-out;
@@ -238,7 +240,7 @@ a img {
 .icoage-tip {
     font-size: 20px;
     font-weight: bold;
-    margin-top: 200px;
+    margin-top: 20%;
 }
 .icoage-tip span{
     color: #ed5f4b;

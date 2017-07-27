@@ -11,6 +11,9 @@
         width: 960px;
     }
 
+    .face .content {
+        width: 800px;
+    }
     .navbar,
     .navbar-placeholder {
         height: 80px;
@@ -147,7 +150,9 @@
     .container {
         width: 750px;
     }
-
+    .face .content {
+        width: 700px;
+    }
     .navbar,
     .navbar-placeholder {
         height: 80px;
@@ -366,6 +371,9 @@
     .container {
         width: auto;
         margin: 0 16px;
+    }
+    .face .content {
+        width: 700px;
     }
     .weixin-qr-code.fixed {
         display: none;
