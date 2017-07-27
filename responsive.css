@@ -394,7 +394,25 @@
     .face .content .white-paper {
         margin-top: 120px;
     }
-
+    .face .ico-store .item{
+        display: none;
+        margin: 0 auto 20px;
+        width: 250px;
+    }
+    .face .ico-store .item.with-iphone{display: block}
+    .face .icoage-tip{
+        margin-top: 50px;
+        font-size: 18px;
+    }
+    .face .ico-store{
+        margin-top: 20px;
+    }
+    .face .ico-store .item img{
+        width: 100%;
+    }
+    .face .white-paper-link{
+        margin-top: 30px;
+    }
     .introduction .section.what .texts,
     .introduction .section.what .image {
         width: auto;
@@ -871,6 +889,14 @@
         width: 200px;
         height: 50px;
         line-height: 50px;
+    }
+    .face .icoage-tip {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 30px;
+    }
+    .face .white-paper-link{
+        margin-top: 20px;
     }
     .team .container {
         width: auto;

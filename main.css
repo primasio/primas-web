@@ -188,10 +188,10 @@ a img {
 
 .face .content {
     position: absolute;
-    width: 500px;
+    width: 760px;
     height: 500px;
     left: 50%;
-    margin-left: -250px;
+    margin-left: -380px;
     top: 100px;
     z-index: 2;
     text-align: center;
@@ -224,28 +224,6 @@ a img {
     margin-top: 12px;
 }
 
-.face .content .white-paper {
-    margin-top: 200px;
-}
-
-.face .content .white-paper .white-paper-link {
-    display: inline-block;
-    width: 236px;
-    height: 60px;
-    line-height: 60px;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 3px;
-    font-size: 16px;
-
-    background-color: #ed5f4b;
-
-    background: -webkit-gradient(linear, left top, right top, from(#df8636), to(#ed5f4b));
-    background: -webkit-linear-gradient(left, #df8636, #ed5f4b);
-    background: -moz-linear-gradient(left, #df8636, #ed5f4b);
-    background: -ms-linear-gradient(left, #df8636, #ed5f4b);
-    background: -o-linear-gradient(left, #df8636, #ed5f4b);
-}
 .face .icoage-link{
     font-size: 16px;
     color: #f68151;
@@ -257,31 +235,32 @@ a img {
 .face .icoage-link:hover{
     text-decoration: underline;
 }
-.primas-white-paper-tip {
+.icoage-tip {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 200px;
+}
+.icoage-tip span{
+    color: #ed5f4b;
+    margin-left: 20px;
+}
+.face .ico-store{
+    margin-top: 50px;
+    text-align: center;
+    font-size:0
+}
+.face .ico-store .item{
+    font-size: 0;
+    display: inline-block;
+    margin: 0 20px;
+}
+.face .ico-store .item.with-iphone{display: none}
+.face .white-paper-link{
     display: block;
-    line-height: 3;
-    font-size: 14px;
-    opacity: 0.7;
+    margin-top: 30px;
+    color: #ed5f4b;
+    text-decoration: underline;
 }
-.face .content .white-paper .white-paper-link:hover {
-    background-color: #fd6f5b;
-    background: -webkit-gradient(linear, left top, right top, from(#ef9646), to(#fd6f5b));
-    background: -webkit-linear-gradient(left, #ef9646, #fd6f5b);
-    background: -moz-linear-gradient(left, #ef9646, #fd6f5b);
-    background: -ms-linear-gradient(left, #ef9646, #fd6f5b);
-    background: -o-linear-gradient(left, #ef9646, #fd6f5b);
-}
-
-.face .content .white-paper .white-paper-link:active {
-    background-color: #dd4f3b;
-
-    background: -webkit-gradient(linear, left top, right top, from(#cf7626), to(#dd4f3b));
-    background: -webkit-linear-gradient(left, #cf7626, #dd4f3b);
-    background: -moz-linear-gradient(left, #cf7626, #dd4f3b);
-    background: -ms-linear-gradient(left, #cf7626, #dd4f3b);
-    background: -o-linear-gradient(left, #cf7626, #dd4f3b);
-}
-
 .introduction {
     position: relative;
     font-size: 16px;
