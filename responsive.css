@@ -426,7 +426,11 @@
         width: auto;
         float: none;
     }
-
+    .introduction .white-paper{
+        margin: 40px auto 0;
+        width: 236px;
+        text-align: center;
+    }
     .introduction .section.what .texts {
         padding-top: 48px;
     }
