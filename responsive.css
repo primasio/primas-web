@@ -106,6 +106,19 @@
     .team .summary .icon-bottom {
         bottom: -18px;
     }
+    .team-item {
+        width: 20%;
+        padding: 40px 1%;
+    }
+
+    .team-item .intro {
+        font-size: 16px;
+        margin-top: 20px;
+        line-height: 1.5;
+        height:150px;
+        font-size: 13px;
+        color: #999;
+    }
     .investors {
         padding: 90px 0;
     }
@@ -272,7 +285,19 @@
     .team .summary span {
         font-size: 25px;
     }
+    .team-item {
+        width: 20%;
+        padding: 40px 1%;
+    }
 
+    .team-item .intro {
+        font-size: 16px;
+        margin-top: 20px;
+        line-height: 1.5;
+        height:150px;
+        font-size: 13px;
+        color: #999;
+    }
     .investors {
         padding: 60px 0;
     }
@@ -564,6 +589,19 @@
     .team .summary .icon-bottom {
         padding-left: 4px;
         bottom: -18px;
+    }
+    .team-item {
+        width: 50%;
+        padding: 0 5px;
+    }
+
+    .team-item .intro {
+        font-size: 16px;
+        margin-top: 20px;
+        line-height: 1.5;
+        height:140px;
+        font-size: 12px;
+        color: #999;
     }
     .investors {
         padding: 48px 0;
@@ -944,6 +982,9 @@
     }
     .team .summary:after {
         width: 298px;
+    }
+    .team-item .intro {
+        height:160px;
     }
     .roadmap .content .milestone .text .name {
         font-size: 14px;

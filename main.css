@@ -531,6 +531,34 @@ a img {
     position: relative;
     bottom: -27px;
 }
+.team-container .content{
+    overflow: auto;
+}
+.team-container{
+    padding: 40px 0;
+}
+
+.team-item {
+    width: 20%;
+    float: left;
+    text-align: center;
+    padding: 40px 1% ;
+}
+
+.team-item .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 24px;
+}
+
+.team-item .intro {
+    font-size: 16px;
+    margin-top: 20px;
+    line-height: 1.5;
+    height:100px;
+    font-size: 13px;
+    color: #999;
+}
 .ourteambg{width: 100%}
 .investors {
     position: relative;
