@@ -859,6 +859,9 @@
         top: 18px;
         font-size: 12px;
     }
+    .investors .investor .intro{
+        height: auto;
+    }
 }
 @media only screen and (max-width: 767px) and (min-width: 520px) {
     .team {
