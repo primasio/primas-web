@@ -568,7 +568,9 @@
     .investors {
         padding: 48px 0;
     }
-
+    .guwen-container{
+        margin-top: 60px;
+    }
     .investors .investor {
         margin-top: 48px;
         width: 50%;
