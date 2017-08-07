@@ -255,8 +255,15 @@ a img {
     font-size: 0;
     display: inline-block;
     margin: 0 20px;
+    width: 250px;
 }
-.face .ico-store .item.with-iphone{display: none}
+.face .ico-store .item img {
+    width: 100%;
+}
+
+.face .ico-store .item.with-iphone{
+    display: none
+}
 .face .white-paper-link{
     display: block;
     margin-top: 30px;

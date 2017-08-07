@@ -14,6 +14,12 @@
     .face .content {
         width: 800px;
     }
+    .face .ico-store .item{
+        font-size: 0;
+        display: inline-block;
+        margin: 0 10px;
+        width: 200px;
+    }
     .navbar,
     .navbar-placeholder {
         height: 80px;
@@ -165,6 +171,12 @@
     }
     .face .content {
         width: 700px;
+    }
+    .face .ico-store .item{
+        font-size: 0;
+        display: inline-block;
+        margin: 0 10px;
+        width: 200px;
     }
     .navbar,
     .navbar-placeholder {
