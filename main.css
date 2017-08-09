@@ -240,7 +240,7 @@ a img {
 .icoage-tip {
     font-size: 20px;
     font-weight: bold;
-    margin-top: 20%;
+    margin-top: 10%;
 }
 .icoage-tip span{
     color: #ed5f4b;
@@ -254,7 +254,7 @@ a img {
 .face .ico-store .item{
     font-size: 0;
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 20px 30px;
     width: 250px;
 }
 .face .ico-store .item img {

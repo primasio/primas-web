@@ -17,7 +17,7 @@
     .face .ico-store .item{
         font-size: 0;
         display: inline-block;
-        margin: 0 10px;
+        margin: 0 10px 20px;
         width: 200px;
     }
     .navbar,
@@ -175,7 +175,7 @@
     .face .ico-store .item{
         font-size: 0;
         display: inline-block;
-        margin: 0 10px;
+        margin: 0 10px 20px;
         width: 200px;
     }
     .navbar,
@@ -440,11 +440,10 @@
         margin-top: 120px;
     }
     .face .ico-store .item{
-        display: none;
-        margin: 0 auto 20px;
-        width: 250px;
+        margin: 0 10px 20px;
+        width: 140px;
     }
-    .face .ico-store .item.with-iphone{display: block}
+    /*.face .ico-store .item.with-iphone{display: inline-block}*/
     .face .icoage-tip{
         margin-top: 50px;
         font-size: 18px;
