@@ -911,6 +911,9 @@
     .investors .investor .intro{
         height: auto;
     }
+    .entrance{
+        width: 200px;
+    }
 }
 @media only screen and (max-width: 767px) and (min-width: 520px) {
     .team {

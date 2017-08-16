@@ -143,7 +143,7 @@
         //当前抽奖次数及总收益展示
         function render_step02_temp(lotteries,tikets) {
             var total_chance=lotteries.length+tikets;//总次数
-            var chance_temp='你有<span class="chance-total">'+total_chance+'</span>次抽奖机会！还剩<span class="chance-have" id="chance-have">'+tikets+'</span>次';
+            var chance_temp='你有<span class="chance-total">'+total_chance+'</span>次抽奖机会！还剩<span class="chance-have" id="chance-have">'+tikets+'</span>次,已抽到<span class="total-tip-iphone">'+prize.pst_total+'</span>个PST！';
             var btn_temp='';
             if(tikets<1){
                 //抽到没有机会

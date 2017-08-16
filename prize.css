@@ -18,6 +18,9 @@ body {
 input{
     -webkit-appearance: none;
 }
+input::-webkit-input-placeholder{
+    color: #ccc;opacity:1;
+}
 .f12{font-size:12px}
 .f14{font-size:14px}
 .f16{font-size:16px}
@@ -109,6 +112,7 @@ body{
     font-size: 18px;
     margin-top: 35px ;
 }
+
 .step01-submit{
     font-size: 18px;
     color: #fff;
@@ -151,6 +155,9 @@ body{
 }
 .chance-have{
     color:#f54a31 ;
+}
+.total-tip-iphone{
+    display: none;
 }
 .btn-box{
     position: absolute;
@@ -357,4 +364,108 @@ body{
 .step03 .prize-total-cont img{
     width: 50%;
     border: none;
+}
+
+/* Extra Small Devices, Mobile */
+@media only screen and (max-width: 767px) {
+    .container {
+        height: 490px;
+        background: url(images/prize-bg-iphone.png) center top no-repeat #eb3e25;
+        background-size: 100% 100%;
+    }
+    .rule{
+        width: 100%;
+        padding: 20px;
+    }
+    .step{
+        width: 100%!important;
+        padding: 20px;
+    }
+    .btn-box{
+        padding: 0 15%;
+    }
+    .btn{
+        width: 40%;
+        height: 36px;
+        line-height: 36px;
+        margin: 0 5%;
+        font-size: 16px;
+        background-size: 100% 100%;
+        float: left;
+    }
+
+    .total-tip-iphone{
+        color:#f54a31 ;
+        display: inline-block;
+    }
+    .prize-total{
+
+    }
+    .step.step01 {
+        padding-top: 230px;
+    }
+    .step01-title {
+        font-size: 20px;
+    }
+    .step01-submit {
+        margin: 0 auto ;
+    }
+    .step02 {
+        top: 166px;
+        height: 350px;
+    }
+    .step02 .prize-total{
+        display: none;
+    }
+    .prize-content {
+        width: 210px;
+        height: 210px;
+        bottom: 85px;
+    }
+    .hongbao {
+        background-size: 100% 100%;
+    }
+    .jiang {
+        top: 30px;
+    }
+    .btn-box {
+        bottom: 40px;
+    }
+    .prize-result .item {
+        font-size: 14px;
+        margin: 5px;
+    }
+    .step02-chance {
+        font-size: 14px;
+        bottom: 87%;
+    }
+    .step03 {
+        top: 200px;
+    }
+    .step03 .prize-total{
+        width: 250px;
+        margin: 0 auto;
+    }
+    .step03 .prize-total-cont{
+        width: 100%;
+    }
+    .step03 .prize-total-cont img{
+        float: left;
+    }
+    .step03 .prize-total-cont .total {
+        padding: 10px 0;
+    }
+    .step03 .prize-total-cont .total .num {
+        font-size: 26px;
+        margin-top: 10px;
+    }
+    .step03 .prize-total-cont .bot {
+        padding: 10px;
+    }
+    .step03 .prize-total:before {
+        height: 10px;
+    }
+    .step03 .prize-total-cont {
+        top: 5px;
+    }
 }
