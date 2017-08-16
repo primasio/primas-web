@@ -87,6 +87,7 @@ body{
 }
 .step{
     width: 750px;
+    position:relative;
 }
 .step.step01{
     width: 480px;
@@ -156,7 +157,8 @@ body{
 .chance-have{
     color:#f54a31 ;
 }
-.total-tip-iphone{
+
+.total-tip-with-iphone{
     display: none;
 }
 .btn-box{
@@ -178,6 +180,7 @@ body{
     line-height: 72px;
     font-weight: bold;
     color: #feef00;
+    background-size: 100% 100%;
 }
 .btn.disabled{
     background-image: url(images/prize-btn-disabled.png);
@@ -391,11 +394,13 @@ body{
         margin: 0 5%;
         font-size: 16px;
         background-size: 100% 100%;
-        float: left;
     }
 
     .total-tip-iphone{
         color:#f54a31 ;
+        display: inline-block;
+    }
+    .total-tip-with-iphone{
         display: inline-block;
     }
     .prize-total{

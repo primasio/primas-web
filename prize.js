@@ -3,11 +3,13 @@
  */
 (function () {
     $(function () {
-        var $step01=$('.step01'),
+        var $steps=$('.step'),
+            $step01=$('.step01'),
             $step02=$('.step02'),
             $step03=$('.step03');
 
         var prize={
+            server_url:'http://172.20.37.68/homepage/',
             ethAddress:'',//账户地址
             prize_loading:false,//正在抽奖
             count_timer:null,//累加定时器
@@ -27,10 +29,17 @@
             if(!$subbtn.hasClass('disabled')){
                 $subbtn.addClass('disabled').text('查询中...')
                 $.ajax({
-                    method: "POST",
-                    url: 'https://api.yuanben.io/primas/report',
+                    method: "GET",
+                    url: prize.server_url+'/index.html',
                     data: { ethAddress: prize.ethAddress},
                     success:function (res) {
+                        var res={
+                            code:200,
+                            data:{
+                                lotteries:[55],
+                                tickets:11
+                            }
+                        };
                         if(res.code==200){
                             if(res.data.lotteries.length){
                                 //计算当前地址获得的pst总数
@@ -39,7 +48,7 @@
                                 });
                                 prize.lotteries=res.data.lotteries;
                             }
-                            prize.tickets=res.data.tikets;
+                            prize.tickets=res.data.tickets;
 
                             if(prize.tickets<1){
                                 //没有抽奖机会 或者已经抽完
@@ -47,16 +56,18 @@
                                     $step01ErrorTip.text('该地址没有抽奖机会').addClass('show');
                                 }else{
                                     $step01.hide();
-                                    $step03.html(render_step03_temp(prize.lotteries)).show(function () {
-                                        //展示pst总数
-                                        total_increase(prize.pst_total,$('#prize-total'));
-                                    });
+                                    $step03.html(render_step03_temp(prize.lotteries)).show();
+                                    //展示pst总数
+                                    total_increase(prize.pst_total,$('#prize-total'));
                                 }
                             }else{
                                 //进入抽奖
+                                $step01.hide();
                                 render_step02_temp(prize.lotteries,prize.tickets)
                                 $step02.show();
                             }
+                        }else{
+                            layer('网络连接失败')
                         }
 
                     },
@@ -87,21 +98,34 @@
                 var prizeParams={ ethAddress: prize.ethAddress,per:$subbtn.data('per')};
                 setTimeout(function () {
                     $.ajax({
-                        method: "POST",
-                        url: 'https://api.yuanben.io/primas/report',
+                        method: "GET",
+                        url: prize.server_url+'/index.html',
                         data: prizeParams,
                         success:function (res) {
-                            if(res.data.lotteries.length){
-                                //计算当前地址获得的pst总数
-                                prize.pst_total=res.data.lotteries.reduce(function (preValue,curValue,index,array){
-                                    return preValue + curValue;
-                                });
-                                prize.lotteries=res.data.lotteries;
+                            var res={
+                                code:200,
+                                data:{
+                                    currentLotteries:[1,4],
+                                    lotteries:[2,4,5],
+                                    tickets:0
+                                }
                             }
-                            prize.tickets=res.data.tikets;
-                            render_lottery_temp(res.data.currentLotteries);
-                            render_step02_temp(prize.lotteries,prize.tickets);
-                            $('.prize-result').show();
+                            if(res.code==200){
+                                if(res.data.lotteries.length){
+                                    //计算当前地址获得的pst总数
+                                    prize.pst_total=res.data.lotteries.reduce(function (preValue,curValue,index,array){
+                                        return preValue + curValue;
+                                    });
+                                    prize.lotteries=res.data.lotteries;
+                                }
+                                prize.tickets=res.data.tickets;
+                                render_lottery_temp(res.data.currentLotteries);
+                                render_step02_temp(prize.lotteries,prize.tickets);
+                                $('#hongbao').hide();
+                                $('.prize-result').show();
+                            }else{
+                                layer('网络连接失败')
+                            }
                         },
                         error:function () {
                             layer('网络连接失败')
@@ -117,10 +141,9 @@
         })
         .on('click','.prize-show-all',function () {
             $step02.hide();
-            $step03.html(render_step03_temp(prize.lotteries)).show(function () {
-                //展示pst总数
-                total_increase(prize.pst_total,$('#prize-total'));
-            });
+            $step03.html(render_step03_temp(prize.lotteries)).show();
+            //展示pst总数
+            total_increase(prize.pst_total,$('#prize-total'));
         });
 
         //最终信息汇总也
@@ -141,16 +164,16 @@
         }
 
         //当前抽奖次数及总收益展示
-        function render_step02_temp(lotteries,tikets) {
-            var total_chance=lotteries.length+tikets;//总次数
-            var chance_temp='你有<span class="chance-total">'+total_chance+'</span>次抽奖机会！还剩<span class="chance-have" id="chance-have">'+tikets+'</span>次,已抽到<span class="total-tip-iphone">'+prize.pst_total+'</span>个PST！';
+        function render_step02_temp(lotteries,tickets) {
+            var total_chance=lotteries.length+tickets;//总次数
+            var chance_temp='你有<span class="chance-total">'+total_chance+'</span>次抽奖机会！还剩<span class="chance-have" id="chance-have">'+tickets+'</span>次<span class="total-tip-with-iphone">,已抽到<span class="total-tip-iphone">'+prize.pst_total+'</span>个PST！</span>';
             var btn_temp='';
-            if(tikets<1){
+            if(tickets<1){
                 //抽到没有机会
                 btn_temp='<div class="btn prize-show-all">查看总数</div>';
             }else{
                 btn_temp='<div class="btn prize-btn prize-one" data-per="1">开始抽奖</div>';
-                if(tikets>=10){
+                if(tickets>=10){
                     btn_temp += '<div class="btn prize-btn prize-ten" data-per="10">10次连抽</div>'
                 }
             }
