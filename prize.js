@@ -9,7 +9,7 @@
             $step03=$('.step03');
 
         var prize={
-            server_url:' https://lottery.yuanben.io/',
+            server_url:' https://lottery.yuanben.io',
             ethAddress:'',//账户地址
             prize_loading:false,//正在抽奖
             count_timer:null,//累加定时器
@@ -32,15 +32,17 @@
                 $.ajax({
                     method: "POST",
                     url: prize.server_url+'/address',
-                    data: { address: prize.ethAddress},
+                    contentType:'application/json',
+                    data: JSON.stringify({ address: prize.ethAddress}),
                     success:function (res) {
-                        var res={
-                            code:200,
-                            data:{
-                                lotteries:[55],
-                                tickets:11
-                            }
-                        };
+                        // var res={
+                        //     code:200,
+                        //     data:{
+                        //         lotteries:[55],
+                        //         tickets:11
+                        //     },
+                        //     message:''
+                        // };
                         if(res.code==200){
                             if(res.data.lotteries.length){
                                 //计算当前地址获得的pst总数
@@ -68,7 +70,7 @@
                                 $step02.show();
                             }
                         }else{
-                            layer('网络连接失败')
+                            layer(res.message||'网络连接失败')
                         }
 
                     },
@@ -101,16 +103,18 @@
                     $.ajax({
                         method: "POST",
                         url: prize.server_url+'/lottery',
-                        data: prizeParams,
+                        contentType:'application/json',
+                        data: JSON.stringify(prizeParams),
                         success:function (res) {
-                            var res={
-                                code:200,
-                                data:{
-                                    currentLotteries:[1,4],
-                                    lotteries:[2,4,5],
-                                    tickets:0
-                                }
-                            }
+                            // var res={
+                            //     code:200,
+                            //     data:{
+                            //         currentLotteries:[1,4],
+                            //         lotteries:[2,4,5],
+                            //         tickets:0
+                            //     },
+                            //     message:""
+                            // }
                             if(res.code==200){
                                 if(res.data.lotteries.length){
                                     //计算当前地址获得的pst总数
@@ -125,10 +129,10 @@
                                 $('#hongbao').hide();
                                 $('.prize-result').show();
                             }else{
-                                layer('网络连接失败')
+                                layer(res.message||'网络连接失败')
                             }
                         },
-                        error:function () {
+                        error:function (res) {
                             layer('网络连接失败')
                         },
                         complete:function () {
