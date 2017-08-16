@@ -98,7 +98,10 @@
                 $('#hongbao').show();
                 var subbtn_text=$subbtn.text();
                 $subbtn.addClass('disabled').text('抽奖中...');
-                var prizeParams={ address: prize.ethAddress,serial:$subbtn.data('per')};
+                var prizeParams={ address: prize.ethAddress};
+                if($subbtn.data('per')==10){
+                    prizeParams.serial=true;
+                }
                 setTimeout(function () {
                     $.ajax({
                         method: "POST",
@@ -170,7 +173,7 @@
 
         //当前抽奖次数及总收益展示
         function render_step02_temp(lotteries,tickets) {
-            var total_chance=lotteries.length+tickets;//总次数
+            var total_chance=parseInt(lotteries.length)+parseInt(tickets);//总次数
             var chance_temp='你共有<span class="chance-total">'+total_chance+'</span>次抽奖机会！还剩<span class="chance-have" id="chance-have">'+tickets+'</span>次<span class="total-tip-with-iphone">,已抽到<span class="total-tip-iphone">'+prize.pst_total+'</span>个PST！</span>';
             var btn_temp='';
             if(tickets<1){
