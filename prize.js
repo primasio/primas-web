@@ -9,14 +9,15 @@
             $step03=$('.step03');
 
         var prize={
-            server_url:'http://172.20.37.68/homepage/',
+            server_url:' https://lottery.yuanben.io/',
             ethAddress:'',//账户地址
             prize_loading:false,//正在抽奖
             count_timer:null,//累加定时器
             tickets:0,//剩余抽奖次数
             lotteries:[],//每次抽奖结果的集合
             pst_total:0//已获得的pst总数
-        }
+        };
+
         $('.step01-submit').on('click',function () {
             //根据eth查询抽奖次数
             prize.ethAddress=$('.eth-address').val();
@@ -29,9 +30,9 @@
             if(!$subbtn.hasClass('disabled')){
                 $subbtn.addClass('disabled').text('查询中...')
                 $.ajax({
-                    method: "GET",
-                    url: prize.server_url+'/index.html',
-                    data: { ethAddress: prize.ethAddress},
+                    method: "POST",
+                    url: prize.server_url+'/address',
+                    data: { address: prize.ethAddress},
                     success:function (res) {
                         var res={
                             code:200,
@@ -95,11 +96,11 @@
                 $('#hongbao').show();
                 var subbtn_text=$subbtn.text();
                 $subbtn.addClass('disabled').text('抽奖中...');
-                var prizeParams={ ethAddress: prize.ethAddress,per:$subbtn.data('per')};
+                var prizeParams={ address: prize.ethAddress,serial:$subbtn.data('per')};
                 setTimeout(function () {
                     $.ajax({
-                        method: "GET",
-                        url: prize.server_url+'/index.html',
+                        method: "POST",
+                        url: prize.server_url+'/lottery',
                         data: prizeParams,
                         success:function (res) {
                             var res={
@@ -157,7 +158,7 @@
                 '</div>'+
                 '<div class="bot">你已用光了所有抽奖次数，共计抽了<i>'+lotteries.length+'</i>次，获得了<i>'+prize.pst_total+'</i>个PST，最好的单次手气抽到了<i>'+max+'</i>个PST！<br>'+
                 '<span>本次活动的奖励最终会与大家ICO认购的代币一起发放，敬请期待哦！</span></div>'+
-                '<img src="images/prize-icon001.png" alt=""><img src="images/prize-icon001.png" alt="">'+
+                '<img src="https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/prize-icon001.png" alt=""><img src="https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/prize-icon001.png" alt="">'+
                 '</div>'+
                 '</div>';
             return temp;
@@ -166,7 +167,7 @@
         //当前抽奖次数及总收益展示
         function render_step02_temp(lotteries,tickets) {
             var total_chance=lotteries.length+tickets;//总次数
-            var chance_temp='你有<span class="chance-total">'+total_chance+'</span>次抽奖机会！还剩<span class="chance-have" id="chance-have">'+tickets+'</span>次<span class="total-tip-with-iphone">,已抽到<span class="total-tip-iphone">'+prize.pst_total+'</span>个PST！</span>';
+            var chance_temp='你共有<span class="chance-total">'+total_chance+'</span>次抽奖机会！还剩<span class="chance-have" id="chance-have">'+tickets+'</span>次<span class="total-tip-with-iphone">,已抽到<span class="total-tip-iphone">'+prize.pst_total+'</span>个PST！</span>';
             var btn_temp='';
             if(tickets<1){
                 //抽到没有机会

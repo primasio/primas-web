@@ -54,7 +54,7 @@ body{
 }
 .container{
     height: 880px;
-    background: url(images/prize-bg.png) center top no-repeat #eb3e25;
+    background: url(https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/prize-bg.png) center top no-repeat #eb3e25;
     position: relative;
 }
 .rule{
@@ -71,7 +71,7 @@ body{
     height: 50px;
     line-height: 50px;
     text-indent: 20px;
-    background: url(images/prize-icon002.png) left center no-repeat;
+    background: url(https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/prize-icon002.png) left center no-repeat;
 }
 .rule-subtitle{
     color: #942514;
@@ -152,7 +152,7 @@ body{
     text-align: center;
     line-height: 38px;
     font-size: 16px;
-    background: url(images/prize-icon003.png) center no-repeat;
+    background: url(https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/prize-icon003.png) center no-repeat;
 }
 .chance-have{
     color:#f54a31 ;
@@ -172,7 +172,7 @@ body{
     margin: 0 20px;
     width: 214px;
     height: 72px;
-    background: url(images/prize-btn.png) no-repeat;
+    background: url(https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/prize-btn.png) no-repeat;
     cursor: pointer;
     display: inline-block;
     font-size: 24px;
@@ -183,7 +183,7 @@ body{
     background-size: 100% 100%;
 }
 .btn.disabled{
-    background-image: url(images/prize-btn-disabled.png);
+    background-image: url(https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/prize-btn-disabled.png);
     cursor: not-allowed;
 }
 .prize-content{
@@ -197,7 +197,7 @@ body{
 }
 .hongbao{
     height: 100%;
-    background: url(images/hongbao.png) center no-repeat;
+    background: url(https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/hongbao.png) center no-repeat;
 }
 .jiang{
     position: absolute;
@@ -373,7 +373,7 @@ body{
 @media only screen and (max-width: 767px) {
     .container {
         height: 490px;
-        background: url(images/prize-bg-iphone.png) center top no-repeat #eb3e25;
+        background: url(https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/prize-bg-iphone.png) center top no-repeat #eb3e25;
         background-size: 100% 100%;
     }
     .rule{
