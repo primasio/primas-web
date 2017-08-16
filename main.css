@@ -242,6 +242,12 @@ a img {
     font-weight: bold;
     margin-top: 10%;
 }
+.lottery-tip {
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ed5f4b;
+}
 .icoage-tip span{
     color: #ed5f4b;
     margin-left: 20px;
