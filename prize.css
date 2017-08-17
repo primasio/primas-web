@@ -380,17 +380,22 @@ body{
         width: 100%;
         padding: 20px;
     }
+    .rule.mt80{
+        margin-top: 80px;
+    }
     .step{
         width: 100%!important;
         padding: 20px;
     }
     .btn-box{
-        padding: 0 15%;
+        padding: 0 ;
+        bottom: -30px;
+        font-size: 0;
     }
     .btn{
         width: 40%;
-        height: 36px;
-        line-height: 36px;
+        height: 45px;
+        line-height: 45px;
         margin: 0 5%;
         font-size: 16px;
         background-size: 100% 100%;
@@ -425,7 +430,7 @@ body{
     .prize-content {
         width: 210px;
         height: 210px;
-        bottom: 85px;
+        bottom: 60px;
     }
     .hongbao {
         background-size: 100% 100%;
@@ -433,16 +438,13 @@ body{
     .jiang {
         top: 30px;
     }
-    .btn-box {
-        bottom: 40px;
-    }
     .prize-result .item {
         font-size: 14px;
         margin: 5px;
     }
     .step02-chance {
         font-size: 14px;
-        bottom: 87%;
+        bottom: 85%;
     }
     .step03 {
         top: 200px;

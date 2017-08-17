@@ -66,8 +66,10 @@
                             }else{
                                 //进入抽奖
                                 $step01.hide();
-                                render_step02_temp(prize.lotteries,prize.tickets)
+                                render_step02_temp(prize.lotteries,prize.tickets);
+                                $('.rule').addClass('mt80');
                                 $step02.show();
+
                             }
                         }else{
                             layer(res.message||'网络连接失败')
@@ -148,6 +150,7 @@
             }
         })
         .on('click','.prize-show-all',function () {
+            $('.rule').removeClass('mt80')
             $step02.hide();
             $step03.html(render_step03_temp(prize.lotteries)).show();
             //展示pst总数

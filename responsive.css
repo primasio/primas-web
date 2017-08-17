@@ -132,6 +132,9 @@
     .investors .investor {
         margin-top: 90px;
     }
+    .investors .investor .intro {
+        height: 180px;
+    }
 
     .investors .investor .photo img {
         width: 160px;
@@ -303,7 +306,6 @@
     }
 
     .team-item .intro {
-        font-size: 16px;
         margin-top: 20px;
         line-height: 1.5;
         height:150px;
@@ -316,6 +318,9 @@
 
     .investors .investor {
         margin-top: 60px;
+    }
+    .investors .investor .intro {
+        height: 160px;
     }
 
     .investors .investor .photo img {
