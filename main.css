@@ -591,6 +591,7 @@ a img {
     width: 25%;
     text-align: center;
     float: left;
+    padding: 0 10px;
 }
 .investors .content{
     overflow: auto;
