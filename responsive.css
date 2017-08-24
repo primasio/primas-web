@@ -158,9 +158,6 @@
         width: 25%;
     }
 
-    .navbar .weixin-qr-code {
-        top: 83px;
-    }
 
     .contact .weixin-qr-code {
         left: 133px;
@@ -387,14 +384,6 @@
         font-size: 16px;
     }
 
-    .navbar .weixin-qr-code {
-        top: 83px;
-    }
-
-    .navbar .weixin-qr-code .triangle {
-        right: 50px;
-    }
-
     .contact .weixin-qr-code {
         left: 40px;
     }
@@ -417,9 +406,7 @@
     .face .content {
         width: 700px;
     }
-    .weixin-qr-code.fixed {
-        display: none;
-    }
+
     .navbar,
     .navbar-placeholder {
         display: none;
@@ -918,6 +905,32 @@
     }
     .entrance{
         width: 200px;
+    }
+    .zhaoping-btn{
+        display: none;
+    }
+    .zhaoping-iphone-btn{
+        display: inline-block;
+        color: #fff;
+        background: #ec6349;
+        cursor: pointer;
+        text-align: center;
+        margin: 20px auto 0;
+        padding: 5px;
+        text-decoration: none;
+    }
+    .zhaoping-iphone-btn span{
+        float: left;
+        margin: 0 10px;
+    }
+    .zhaoping-iphone-btn .large{
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 20px;
+    }
+    .zhaoping-iphone-btn .sup{
+        font-size: 14px;
+        line-height: 40px;
     }
 }
 @media only screen and (max-width: 767px) and (min-width: 520px) {

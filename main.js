@@ -186,7 +186,14 @@
         processingInstance = new Processing(canvas, startSolarSystem);
         processingInstance.resizeSketch(updateHeight);
 
+
     });
+    if(location.search && location.search.indexOf('scrollTo@')!==-1){
+        var idx=location.search.indexOf('@');
+        var pos=location.search.slice(idx+1);
+        var $el=document.querySelector('#'+pos);
+        $("html,body").stop().animate({scrollTop:$el.offsetTop-navbarHeight},600)
+    }
 })();
 
 

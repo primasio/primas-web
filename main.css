@@ -107,59 +107,7 @@ a img {
     border-bottom: 3px solid #ed5f4b;
 }
 
-.weixin-qr-code {
-    display: none;
-    width: 200px;
-    height: 220px;
-    padding: 10px 10px 0 10px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.15);
-}
-.weixin-qr-code.fixed {
-    display: block;
-    font-size: 12px;
-    position: fixed;
-    right: 10px;
-    top: 400px;
-    color: #ccc;
-    z-index: 4;
-    padding: 10px 0px 0;
-    width: 130px;
-    height: 160px;
-    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
-}
-.weixin-qr-code.fixed .title {
-    color: #666;
-}
-.weixin-qr-code.active {
-    display: block;
-}
 
-.weixin-qr-code .title {
-    text-align: center;
-    font-size: 14px;
-    color: #232328;
-}
-
-.navbar .weixin-qr-code .triangle {
-    position: absolute;
-    width: 0;
-    height: 0;
-    right: 60px;
-    top: -14px;
-    border: 14px #ffffff solid;
-    border-top-width: 0;
-    border-left-color: rgba(0,0,0,0);
-    border-right-color: rgba(0,0,0,0);
-}
-
-.navbar .weixin-qr-code {
-    position: absolute;
-    top: 104px;
-    right: -20px;
-}
 
 .sep-line {
     display: inline-block;
@@ -843,8 +791,20 @@ a img {
 }
 
 .contact .weixin-qr-code {
+    display: none;
+    width: 200px;
+    height: 220px;
+    padding: 10px 10px 0 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.15);
+}
+.contact .weixin-qr-code.active {
+    display: block;
+}
+.contact .weixin-qr-code {
     position: absolute;
-    top: -270px;
+    top: -250px;
     left: 338px
 }
 
@@ -1054,4 +1014,31 @@ span.require {
     left: -20px;
     top: 20px;
     color: red;
+}
+
+
+.zhaoping-btn {
+    display: block;
+    font-size: 12px;
+    position: fixed;
+    right: 10px;
+    top: 360px;
+    color: #fff;
+    z-index: 4;
+    padding: 170px 0px 0;
+    width: 130px;
+    height: 210px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    text-align: center;
+    background: url(https://yb-public.oss-cn-shanghai.aliyuncs.com/primas/images/zhaopin-btn.png) no-repeat;
+    cursor: pointer;
+    background-size: 100% 100%;
+    text-decoration: none;
+}
+.zhaoping-btn:hover{
+    text-decoration: underline;
+}
+.zhaoping-iphone-btn{
+    display: none;
 }
