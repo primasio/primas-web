@@ -1,0 +1,11 @@
+<div class="navbar" id="navbar" nav-fixed>
+    <div class="container">
+        <a ui-sref="face" class="logo">
+            <img src="../../common/images/logo.png" alt="">
+        </a>
+        <div class="items">
+            <a class="item-nav" ng-href="{{'/#'+item}}"
+               translate={{'nav_'+item}} ng-repeat="item in $ctrl.navItems"></a>
+        </div>
+    </div>
+</div>

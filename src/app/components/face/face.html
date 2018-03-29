@@ -1,0 +1,538 @@
+<div class="language-box">
+    <span>language</span>
+    <select id="language" ng-model="$ctrl.cur_lang" ng-change="$ctrl.switching($ctrl.cur_lang)">
+        <option value="en">English</option>
+        <option value="zh">中文简体</option>
+    </select>
+</div>
+
+<a ui-sref="career"  class="zhaoping-btn" translate="face_career" ng-if="$ctrl.cur_lang=='zh'"></a>
+
+<div class="navbar nav-face" id="navbar" nav-fixed>
+    <div class="container">
+        <a ui-sref="face" class="logo">
+            <img src="../../common/images/logo.png" alt="">
+        </a>
+        <div class="items">
+            <a ng-click="$ctrl.gotoAnchor(item)" class="item-nav" data="{{item}}"
+               translate={{'nav_'+item}} ng-repeat="item in $ctrl.navItems"></a>
+        </div>
+    </div>
+</div>
+
+<div id="face" class="face-banner">
+    <canvas class="intro-bg" intro-bg></canvas>
+    <div class="container">
+        <div class="content">
+            <img class="mobile-logo-img" src="./images/logo.png" alt="">
+            <div class="slogan" translate="face_slogan"></div>
+            <div class="description">
+                <div class="line" translate="face_description01"></div>
+                <div class="line" translate="face_description02"></div>
+            </div>
+            <a ui-sref="career" class="zhaoping-iphone-btn clearfix" ng-if="$ctrl.cur_lang=='zh'">
+                <span class="large" translate="face_zhaoping"></span>
+                <span class="sup" translate="face_career"></span>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div id="introduction" class="introduction">
+    <div class="container-what">
+        <div class="container clearfix">
+            <div class="text fl">
+                <div class="title" translate="introduction_text001"></div>
+                <div class="content">
+                    <p class="" translate="introduction_text002"></p>
+                </div>
+                <div class="white-paper">
+                    <a ui-sref="whitepaper({lang:$ctrl.cur_lang})" target="_blank" class="white-paper-link"  data-track="白皮书下载" translate="introduction_text003"></a>
+                    <span class="primas-white-paper-tip">V1.3.1 - 2017.12.18</span>
+                </div>
+            </div>
+            <div class="image fr">
+                <img src="./images/phone.png" />
+            </div>
+        </div>
+    </div>
+    <div class="container-strength">
+        <div class="container">
+                <div class="main-section-title">
+                    <span class="sep-line">/</span>
+                    <span class="zh" translate="introduction_text004"></span>
+                    <span class="sep-line">/</span>
+                </div>
+                <div class="content">
+                    <div class="panel-item clearfix">
+                        <div class="summary fr desc-padding-left">
+                            <div class="heading " translate="introduction_text005"></div>
+                            <div class="desc " translate="introduction_text006"></div>
+                        </div>
+                        <img src="./images/intro06.png?fdf" alt="" class="img fl">
+                    </div>
+                    <div class="panel-item clearfix">
+                        <div class="summary fl desc-padding-right">
+                            <div class="heading " translate="introduction_text007"></div>
+                            <div class="desc " translate="introduction_text008">
+                            </div>
+                        </div>
+                        <img src="./images/intro05.png" alt="" class="img fr">
+                    </div>
+                    <div class="panel-item clearfix">
+                        <div class="summary fr desc-padding-left">
+                            <div class="heading " translate="introduction_text009"></div>
+                            <div class="desc " translate="introduction_text010"></div>
+                        </div>
+                        <img src="./images/intro04.png" alt="" class="img fl">
+                    </div>
+                    <div class="panel-item clearfix">
+                        <div class="summary fl desc-padding-right">
+                            <div class="heading " translate="introduction_text011"></div>
+                            <div class="desc " translate="introduction_text012">
+
+                            </div>
+                        </div>
+                        <img src="./images/intro03.png" alt="" class="img fr">
+                    </div>
+                    <div class="panel-item clearfix">
+                        <div class="summary fr desc-padding-left">
+                            <div class="heading " translate="introduction_text013"></div>
+                            <div class="desc " translate="introduction_text014">
+                            </div>
+                        </div>
+                        <img src="./images/intro02.png" alt="" class="img fl">
+                    </div>
+                    <div class="panel-item clearfix">
+                        <div class="summary fl desc-padding-right">
+                            <div class="heading " translate="introduction_text015"></div>
+                            <div class="desc " translate="introduction_text016">
+                            </div>
+                        </div>
+                        <img src="./images/intro01.png" alt="" class="img fr">
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="container-advantage">
+        <div class="container">
+            <div class="section advantage clearfix">
+                <div class="main-section-title">
+                    <span class="sep-line">/</span>
+                    <span class="zh" translate="introduction_text017"></span>
+                    <span class="sep-line">/</span>
+                </div>
+                <div class="content clearfix">
+                    <div class="item">
+                        <div class="title" translate="introduction_text018"></div>
+                        <div class="desc" translate="introduction_text019"></div>
+                    </div>
+                    <div class="item">
+                        <div class="title" translate="introduction_text020"></div>
+                        <div class="desc" translate="introduction_text021"></div>
+                    </div>
+                    <div class="item">
+                        <div class="title" translate="introduction_text022"></div>
+                        <div class="desc" translate="introduction_text023"></div>
+                    </div>
+                    <div class="item">
+                        <div class="title" translate="introduction_text024"></div>
+                        <div class="desc" translate="introduction_text025"></div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-production">
+        <div class="container">
+            <div class="section production clearfix">
+                <div class="production-left">
+                    <img src="images/demo-bg.png" class="production-left-img" alt="">
+                </div>
+                <div class="production-right">
+                    <div class="production-title" translate="introduction_text026">
+                    </div>
+                    <div class="production-cilent">
+                        <div class="production-cilent-sup" translate="introduction_text027"></div>
+                        <div class="t-center clearfix">
+                            <div class="production-cilent-item">
+                                <img src="./images/apple.png" class="production-cilent-icon" alt="">
+                                <div class="production-cilent-icon-sub">iOS</div>
+                            </div>
+                            <div class="production-cilent-item">
+                                <img src="./images/andriod.png" class="production-cilent-icon" alt="">
+                                <div class="production-cilent-icon-sub">Android</div>
+                            </div>
+
+
+                        </div>
+                        <div class="demo" id="ios-download">
+                            <img ng-click="$ctrl.showForm=true" width="100%" class="ios-download" src="./images/app_download.png" alt="">
+                            <span translate="introduction_text028"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div id="investors" class="investors">
+    <div class="container">
+        <div class="main-section-title">
+            <span class="sep-line">/</span>
+            <span class="zh" translate="investors_text001"></span>
+            <span class="sep-line">/</span>
+        </div>
+        <div class="content clearfix">
+            <div class="investor">
+                <div class="photo">
+                    <img src="./images/investors/shenbo.png" />
+                </div>
+                <div class="name" translate="investors_text002"></div>
+                <div class="intro" translate="investors_text003"></div>
+            </div>
+            <div class="investor">
+                <div class="photo">
+                    <img src="./images/investors/gongming.png" />
+                </div>
+                <div class="name" translate="investors_text004"></div>
+                <div class="intro" translate="investors_text005"></div>
+            </div>
+            <div class="investor">
+                <div class="photo">
+                    <img src="./images/investors/yuwenbo.png" />
+                </div>
+                <div class="name" translate="investors_text006"></div>
+                <div class="intro" translate="investors_text007"></div>
+            </div>
+            <div class="investor">
+                <div class="photo">
+                    <img src="./images/investors/chenyanfeng.png" />
+                </div>
+                <div class="name" translate="investors_text008"></div>
+                <div class="intro" translate="investors_text009"></div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="container guwen-container" ng-if="$ctrl.cur_lang=='zh'">
+        <div class="main-section-title">
+            <span class="sep-line">/</span>
+            <span class="zh">顾问</span>
+            <span class="sep-line">/</span>
+        </div>
+        <div class="content clearfix">
+
+            <div class="investor">
+                <div class="photo">
+                    <img src="./images/investors/jianghaibing.png" />
+                </div>
+                <div class="name">蒋海柄</div>
+                <div class="intro">多牛投资董事长、支付宝联合创始人、花名老顽童、Primas早期投资人</div>
+            </div>
+            <div class="investor">
+                <div class="photo">
+                    <img src="./images/investors/kanhaibin.png" />
+                </div>
+                <div class="name">阚海斌</div>
+                <div class="intro">
+                    复旦大学教授、博士生导师、密码学与信息安全领域国家级专家、复旦区块链实验室发起人。
+                </div>
+            </div>
+            <div class="investor">
+                <div class="photo">
+                    <img src="./images/investors/chenyunwen.png" />
+                </div>
+                <div class="name">陈运文</div>
+                <div class="intro">
+                    达观数据创始人、国际计算机学会（ACM）会员、中国知名人工智能技术专家
+                </div>
+            </div>
+            <div class="investor">
+                <div class="photo">
+                    <img src="./images/investors/duanjiang.png" />
+                </div>
+                <div class="name">段江</div>
+                <div class="intro">
+                    恒图科技CEO 西南财经大学教授、博导，英国诺丁汉大学荣誉教授，中组部国家“千人计划”专家，国务院政府特殊津贴专家。恒图科技旗下的图像处理、设计平台Fotor在全球积累超过2.5亿用户
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+<div id="team" class="team">
+    <div class="container">
+        <div class="main-section-title">
+            <span class="sep-line">/</span>
+            <span class="zh" translate="team_text001"></span>
+            <span class="sep-line">/</span>
+        </div>
+    </div>
+</div>
+
+<div id="roadmap" class="roadmap">
+    <div class="container">
+        <div class="main-section-title">
+            <span class="sep-line">/</span>
+            <span class="zh" translate="roadmap_text001"></span>
+            <span class="sep-line">/</span>
+        </div>
+        <div class="line">
+            <div class="gradient left"></div>
+            <div class="gradient right"></div>
+        </div>
+        <div class="content">
+            <div class="milestone right">
+                <div class="text">
+                    <div class="date">2016.12</div>
+                    <div class="name" translate="roadmap_text002"></div>
+                </div>
+                <div class="icon">
+                    <img src="./images/point.png" class="img" />
+                </div>
+            </div>
+            <div class="milestone left">
+                <div class="text">
+                    <div class="date">2017.8</div>
+                    <div class="name">Primas ICO</div>
+                </div>
+                <div class="icon">
+                    <img src="./images/point.png" class="img" />
+                </div>
+            </div>
+            <div class="milestone right">
+                <div class="text">
+                    <div class="date">2018.1</div>
+                    <div class="name" translate="roadmap_text003"></div>
+                </div>
+                <div class="icon">
+                    <img src="./images/point.png" class="img" />
+                </div>
+            </div>
+            <div class="milestone left">
+                <div class="text">
+                    <div class="date">2018.6</div>
+                    <div class="name" translate="roadmap_text004"></div>
+                </div>
+                <div class="icon">
+                    <img src="./images/point.png" class="img" />
+                </div>
+            </div>
+            <div class="milestone right">
+                <div class="text">
+                    <div class="date">2018.12</div>
+                    <div class="name" translate="roadmap_text005"></div>
+                </div>
+                <div class="icon">
+                    <img src="./images/point.png" class="img" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="partners" class="partners  nav-section">
+    <div class="container">
+        <div class="main-section-title">
+            <span class="sep-line">/</span>
+            <span class="zh" translate="partners_text001"></span>
+            <span class="sep-line">/</span>
+        </div>
+        <div class="content clearfix">
+            <a class="partner" href="http://fenbushi.vc" target="_blank">
+                <img src="./images/partners/fenbushi.png" />
+            </a>
+            <a class="partner" href="http://chainb.com" target="_blank">
+                <img src="./images/partners/chainb.png" />
+            </a>
+            <a class="partner" href="https://www.icoage.com" target="_blank">
+                <img src="./images/partners/icoage.png" />
+            </a>
+            <a class="partner" href="https://yuanben.io" target="_blank">
+                <img src="./images/partners/yuanben.png" />
+            </a>
+            <a class="partner" href="http://cybex.io" target="_blank">
+                <img src="./images/partners/cybex.png" />
+            </a>
+            <a class="partner" href="http://www.datagrand.com" target="_blank">
+                <img src="./images/partners/daguan.png" />
+            </a>
+            <a class="partner" href="https://delphy.org" target="_blank">
+                <img src="./images/partners/delphy.png" />
+            </a>
+            <a class="partner" href="javascript:;" target="_blank">
+                <img src="images/partners/scry.png" />
+            </a>
+            <a class="partner" href="https://renrenico.com" target="_blank">
+                <img src="./images/partners/renrenico.png" />
+            </a>
+            <a class="partner" href="http://chainpe.com/cn/" target="_blank">
+                <img src="./images/partners/chainpe.png" />
+            </a>
+            <a class="partner" href="https://www.otonomos.com/" target="_blank">
+                <img src="images/partners/otonomos.png" />
+            </a>
+            <a class="partner" href="https://www.btc9.com/Ico/" target="_blank">
+                <img src="./images/partners/bitouzi.png" />
+            </a>
+            <a class="partner" href="https://www.3ico.com/" target="_blank">
+                <img src="./images/partners/bico.png" />
+            </a>
+            <a class="partner" href="https://bitcoinworld.com/" target="_blank">
+                <img src="./images/partners/bitcoinworld.png" width="" />
+            </a>
+            <a class="partner" href="http://bitett.com/portal.php" target="_blank">
+                <img src="./images/partners/bttt.jpg" alt="">
+            </a>
+            <a class="partner" href="https://www.7234.cn/" target="_blank">
+                <img src="./images/partners/lsj.jpg" alt="">
+            </a>
+            <a class="partner" href="https://big.one/" target="_blank">
+                <img src="./images/partners/bigone.png" alt="">
+            </a>
+            <a class="partner" href="http://www.jinse.com/" target="_blank">
+                <img src="./images/partners/jscj.png" alt="">
+            </a>
+            <a class="partner" href="http://www.nodecap.com/" target="_blank">
+                <img src="./images/partners/nodecapital.png" alt="">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="media" class="media  nav-section">
+    <div class="container">
+        <div class="main-section-title">
+            <span class="sep-line">/</span>
+            <span class="zh" translate="media_text001"></span>
+            <span class="sep-line">/</span>
+        </div>
+        <div class="content clearfix media-content">
+            <a class="media-item" href="http://sh.people.com.cn/n2/2017/0714/c176739-30471278.html" target="_blank">
+                <img src="./images/media-report/rm.png" alt="" class="media-item-img">
+            </a>
+            <a class="media-item" href="http://sh.xinhuanet.com/2017-07/15/c_136445659.htm" target="_blank">
+                <img src="./images/media-report/xh.png" alt="" class="media-item-img">
+            </a>
+            <a class="media-item" href="http://www.sh.chinanews.com/chanjing/2017-07-13/26117.shtml" target="_blank">
+                <img src="./images/media-report/xw.png" alt="" class="media-item-img">
+            </a>
+            <a class="media-item" href="http://xiaofei.china.com.cn/news/info-5-70730.html" target="_blank">
+                <img src="./images/media-report/xf.png" alt="" class="media-item-img">
+            </a>
+            <a class="media-item" href="http://www.cs.com.cn/sylm/jsbd/201707/t20170713_5372411.html" target="_blank">
+                <img src="./images/media-report/zg.png" alt="" class="media-item-img">
+            </a>
+            <a class="media-item" href="http://mp.weixin.qq.com/s?__biz=MzA3NTg1MjE0Ng==&mid=2649778380&idx=1&sn=40d16afb54891a6a0b1a0470c9802fa0&chksm=876ef8d1b01971c7f48cecd59e16742fc694dc945601bddd80035d1422f7f061fa380e95aa77&mpshare=1&scene=1&srcid=0710EBNYmm3vs6YKOePDXOHb#rd" target="_blank">
+                <img src="./images/media-report/qb.png" alt="" class="media-item-img">
+            </a>
+            <a class="media-item" href="https://www.yidianzixun.com/article/0GpemfPZ" target="_blank">
+                <img src="./images/media-report/dy.png" alt="" class="media-item-img">
+            </a>
+
+            <a class="media-item" href="http://finance.stockstar.com/SS2017071300002889.shtml" target="_blank">
+                <img src="./images/media-report/zq.png" alt="" class="media-item-img">
+            </a>
+            <a class="media-item" href="http://app.lanjinger.com/share/news_detail?id=54573" target="_blank">
+                <img src="./images/media-report/lj.png" alt="" class="media-item-img">
+            </a>
+            <a class="media-item" href="http://www.tuoniao.fm/p/13082.html" target="_blank">
+                <img src="./images/media-report/tuoniao.png" alt="" class="media-item-img">
+            </a>
+            <a class="media-item" href="http://www.chainfor.com/" target="_blank">
+                <img src="./images/media-report/lxcj.png" alt="" class="media-item-img">
+            </a>
+
+        </div>
+    </div>
+</div>
+
+<div class="contact  nav-section">
+    <div class="container">
+        <div class="title">
+            <div class="zh" translate="contact_text001"></div>
+        </div>
+
+        <div class="content">
+            <div class="weixin-qr-code" ng-show="$ctrl.showEwm">
+                <div class="txt" translate="contact_text002"></div>
+                <div class="image">
+                    <img ng-if="$ctrl.cur_lang=='en'" src="./images/telegram.png" class="ewm-img" width="100%" alt="">
+                    <img ng-if="$ctrl.cur_lang=='zh'" src="images/ewm.png" class="ewm-img" width="100%" alt="">
+                </div>
+                <div class="triangle"></div>
+            </div>
+
+            <a class="social" href="https://www.facebook.com/summer.primas" target="_blank">
+                <div class="icon">
+                    <img src="./images/facebook.png" />
+                </div>
+                <div class="name">Facebook</div>
+            </a>
+            <a class="social" href="https://slack.primas.io/" target="_blank">
+                <div class="icon">
+                    <img src="./images/slack.png" />
+                </div>
+                <div class="name">Slack</div>
+            </a>
+            <a class="social" href="https://twitter.com/PrimasOfficial" target="_blank">
+                <div class="icon">
+                    <img src="./images/twitter.png" />
+                </div>
+                <div class="name">Twitter</div>
+            </a>
+            <a class="social weixin" ng-click="$ctrl.showEwm=!$ctrl.showEwm;$event.stopPropagation()" ng-if="$ctrl.cur_lang=='en'">
+                <div class="icon">
+                    <img src="./images/telegram-icon.png" />
+                </div>
+                <div class="name">Telegram</div>
+            </a>
+            <a class="social weixin" ng-click="$ctrl.showEwm=!$ctrl.showEwm;$event.stopPropagation()" ng-if="$ctrl.cur_lang=='zh'">
+                <div class="icon">
+                    <img src="./images/wechat.png" />
+                </div>
+                <div class="name">Wechat</div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="copyright">
+    &copy; 2017 Primas. All rights reserved.
+</div>
+
+
+<div class="popup" ng-show="$ctrl.showForm">
+    <form class="pup-form" name="form" ng-submit="$ctrl.subform()" novalidate>
+        <div class="close" ng-click="$ctrl.showForm=false">&times;</div>
+        <div class="top-header" translate="popup_text001"></div>
+        <div class="form-group"><span class="require">*</span>
+            <input required type="email" name="emailAddress" ng-model="$ctrl.form.email" class="input-write input-write-email" placeholder="{{'emailAddress' | translate}}" >
+        </div>
+        <div ng-message="form.emailAddress.$error" ng-show="form.emailAddress.$dirty&&form.emailAddress.$invalid">
+            <div class="errortip" translate="popup_text002" ng-message="email"></div>
+        </div>
+        <div class="form-group">
+            <textarea type="text" name="applyReason" ng-model="$ctrl.form.remark" class="textarea-write" placeholder="{{'applyReason' | translate}}"></textarea>
+            <div class="input-write input-write-beizhu"></div>
+        </div>
+        <input type="submit" class="sub-btn" ng-disabled="$ctrl.loading || form.$invalid" value="{{'popup_text003' | translate}}">
+        <div class="bot-tip" translate="popup_text004">
+        </div>
+    </form>
+</div>

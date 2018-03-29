@@ -1,0 +1,73 @@
+@import 'mixins';
+@import 'colors';
+@import 'sizes';
+
+body,
+input,
+select,
+textarea,
+button
+{
+    @include fonts();
+}
+input,
+button,
+select,
+textarea,
+img
+{
+    outline:none;
+    resize:none;
+}
+html{
+    line-height: 1;
+    font-size: 16px;
+    overflow-x: hidden;
+    color: #333;
+}
+*
+{
+    box-sizing:border-box;
+}
+.clearfix {
+    zoom:1;
+    &:after {clear:both;content:'.';display:block;width: 0;height: 0;visibility:hidden;}
+}
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+
+.language-box {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    z-index: 9;
+    color: #fff;
+    font-size: 12px;
+    &:after{
+    position: absolute;
+    content: '';
+    right: 4px;
+    top: 8px;
+    border: 4px solid transparent;
+    border-top-color:#000;
+
+}
+    select {
+        outline: none;
+        font-size: 12px;
+        padding: 0 5px;
+        padding-right: 20px;
+        -webkit-appearance: none;
+        border: 1px solid #000;
+        background: #fff;
+        height: 20px;
+        line-height: 20px;
+    }
+}

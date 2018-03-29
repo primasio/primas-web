@@ -1,0 +1,18 @@
+@mixin fonts()
+{
+    font-family: 'PingFang SC', 'HanHei SC', 'Microsoft YaHei', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+    -webkit-font-smoothing: antialiased;
+}
+@mixin ellipsis()
+{
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+@mixin absolute-center()
+{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform:translate3d(-50%,-50%,0)
+}

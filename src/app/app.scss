@@ -1,0 +1,17 @@
+@import 'common/styles/common';
+.container {
+    position:relative;
+    height: 100%;
+    margin:0 auto;
+    width: 1000px;
+}
+
+
+
+/* Small Devices, Mobile */
+@media only screen and (max-width: $screen-xs-max) {
+    .container{
+        width: 90%;
+    }
+
+}
